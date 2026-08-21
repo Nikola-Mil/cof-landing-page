@@ -1,0 +1,105 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.about {
+  &__context {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 820px;
+    margin: 0 auto 56px;
+    padding: 24px 28px;
+    background: $white;
+    border-left: 4px solid $gold;
+    border-radius: $radius-sm;
+    box-shadow: $shadow-sm;
+
+    .material-icons-outlined {
+      color: $gold-deep;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    p {
+      margin: 0;
+      color: $gray-700;
+    }
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+    text-align: center;
+
+    @include responsive($bp-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &-value {
+      font-family: $font-display;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: $gold-deep;
+    }
+
+    &-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: $gray-600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__formats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+
+    @include responsive($bp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive($bp-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__format-card {
+    @include card;
+    padding: 32px 26px;
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    p {
+      font-size: 0.92rem;
+      margin: 0;
+    }
+  }
+
+  &__format-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: $radius-md;
+    background: $gold-tint;
+    @include flex-center;
+    margin-bottom: 18px;
+
+    .material-icons-outlined {
+      font-size: 1.6rem;
+      color: $gold-deep;
+    }
+  }
+}

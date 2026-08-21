@@ -1,0 +1,44 @@
+<section class="about section" id="about">
+  <div class="container">
+    <div class="section__title">
+      <span class="section__eyebrow">The Concept</span>
+      <h2>A Policy Forum Built on Lessons, Not Just Speeches</h2>
+      <p>
+        A high-level, expert international policy forum on lessons from the new EU member states'
+        experience with accession and post-accession development — for Montenegro's final stage of EU
+        accession and its long-term economic and institutional transformation. Policy lessons will also
+        be relevant for other candidate states.
+      </p>
+    </div>
+
+    <div class="about__context">
+      <span class="material-icons-outlined">flag</span>
+      <p>
+        The conference takes place at a particularly important moment, as Montenegro marks 20 years of
+        its renewed independence while advancing towards the concluding phase of its European integration
+        and the anticipated EU accession in 2028.
+      </p>
+    </div>
+
+    <div class="about__stats">
+      @for (stat of stats; track stat.label) {
+        <div class="about__stat">
+          <span class="about__stat-value">{{ stat.value }}</span>
+          <span class="about__stat-label">{{ stat.label }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="about__formats">
+      @for (format of formats; track format.title) {
+        <div class="about__format-card">
+          <div class="about__format-icon">
+            <span class="material-icons-outlined">{{ format.icon }}</span>
+          </div>
+          <h3>{{ format.title }}</h3>
+          <p>{{ format.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.committee {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include responsive($bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: $white;
+    border-radius: $radius-md;
+    padding: 24px;
+    box-shadow: $shadow-sm;
+    transition: box-shadow $transition-base;
+
+    &:hover {
+      box-shadow: $shadow-md;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 0.85rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: $black;
+    color: $gold-light;
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 1.1rem;
+    @include flex-center;
+  }
+}

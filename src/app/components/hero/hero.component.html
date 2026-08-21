@@ -1,0 +1,52 @@
+<section class="hero" id="hero">
+  <div class="hero__lines" aria-hidden="true">
+    <svg viewBox="0 0 600 800" preserveAspectRatio="none">
+      <path d="M420,-20 C520,120 380,260 480,400 C560,510 460,650 540,820" />
+      <path d="M480,-20 C580,140 440,280 540,420 C620,530 520,670 600,820" />
+      <path d="M360,-20 C460,100 320,240 420,380 C500,490 400,630 480,820" />
+    </svg>
+  </div>
+  <div class="hero__mountains" aria-hidden="true">
+    <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <polygon class="mountain mountain--back" points="0,200 0,120 180,40 340,110 520,30 700,120 880,55 1040,130 1200,70 1200,200" />
+      <polygon class="mountain mountain--front" points="0,200 0,160 150,90 300,150 480,80 660,150 860,95 1040,160 1200,110 1200,200" />
+    </svg>
+  </div>
+
+  <div class="hero__content container">
+    <span class="hero__eyebrow">{{ info.kicker }}</span>
+    <h1 class="hero__title">{{ info.title }}</h1>
+    <p class="hero__tagline">{{ info.tagline }}</p>
+
+    <p class="hero__lead">
+      Nine countries. A Nobel laureate. Two days of conversation about what EU accession actually means.
+    </p>
+
+    <div class="hero__meta">
+      <div class="hero__meta-item">
+        <span class="material-icons-outlined">event</span>
+        <span>{{ info.dateRange }}</span>
+      </div>
+      <div class="hero__meta-item">
+        <span class="material-icons-outlined">location_on</span>
+        <span>{{ info.venue }}, Montenegro</span>
+      </div>
+      <div class="hero__meta-item">
+        <span class="material-icons-outlined">verified</span>
+        <span>{{ info.patronage }}</span>
+      </div>
+    </div>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" [href]="info.registerUrl" target="_blank" rel="noopener noreferrer">
+        Register Now
+        <span class="material-icons-outlined">arrow_forward</span>
+      </a>
+      <button type="button" class="btn btn--outline" (click)="scrollToSection('agenda')">
+        View Agenda
+      </button>
+    </div>
+
+    <p class="hero__hosts">Hosted by {{ info.hosts }}</p>
+  </div>
+</section>

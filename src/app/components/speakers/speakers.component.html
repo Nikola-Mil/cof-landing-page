@@ -1,0 +1,52 @@
+<section class="speakers section" id="speakers">
+  <div class="container">
+    <div class="section__title">
+      <span class="section__eyebrow">Speakers</span>
+      <h2>Voices from Nine EU Accession Stories</h2>
+      <p>
+        Economists, former ministers and policy leaders who helped shape — or closely studied — EU
+        accession across Central, Eastern and South-Eastern Europe. Tap a card to read the full bio.
+      </p>
+    </div>
+
+    <div class="speakers__grid">
+      @for (speaker of speakers; track speaker.id) {
+        <button type="button" class="speakers__card" (click)="open(speaker.id)">
+          <span class="speakers__photo-wrap">
+            <img [src]="speaker.photo" [alt]="speaker.name" loading="lazy" width="500" height="625" />
+          </span>
+          <span class="speakers__name">{{ speaker.name }}</span>
+          <span class="speakers__role">{{ speaker.title }}</span>
+        </button>
+      }
+    </div>
+  </div>
+
+  @if (selected(); as speaker) {
+    <div class="speakers__backdrop" (click)="close()">
+      <div
+        class="speakers__modal"
+        role="dialog"
+        aria-modal="true"
+        [attr.aria-label]="speaker.name"
+        (click)="$event.stopPropagation()"
+      >
+        <button type="button" class="speakers__modal-close" (click)="close()" aria-label="Close speaker bio">
+          <span class="material-icons-outlined">close</span>
+        </button>
+        <div class="speakers__modal-header">
+          <img [src]="speaker.photo" [alt]="speaker.name" width="500" height="625" />
+          <div>
+            <h3>{{ speaker.name }}</h3>
+            <p class="speakers__modal-title">{{ speaker.title }}</p>
+          </div>
+        </div>
+        <div class="speakers__modal-body">
+          @for (paragraph of speaker.bio; track paragraph) {
+            <p>{{ paragraph }}</p>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</section>

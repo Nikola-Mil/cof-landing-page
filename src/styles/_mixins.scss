@@ -1,0 +1,64 @@
+@use 'variables' as *;
+
+// Mixins
+@mixin container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: $container-padding;
+}
+
+@mixin section-padding {
+  padding: $section-padding;
+  @media (max-width: $bp-md) {
+    padding: $section-padding-sm;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin card {
+  background: $white;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+@mixin gradient-bg {
+  background: linear-gradient(135deg, $black 0%, $gray-800 55%, $gold-deep 100%);
+}
+
+@mixin gradient-text {
+  background: linear-gradient(135deg, $gold-deep, $gold-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin responsive($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

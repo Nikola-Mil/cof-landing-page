@@ -1,0 +1,42 @@
+<nav class="navbar" role="navigation" aria-label="Main navigation" [class.scrolled]="scrolled()">
+  <div class="navbar__inner container">
+    <div class="navbar__brand">
+      <a class="navbar__cof-link" href="https://centerforfinance.me/" target="_blank" rel="noopener noreferrer" aria-label="Center for Finance">
+        <img class="navbar__cof-logo" src="assets/images/logos/cof-logo-black.png" alt="Center for Finance" />
+      </a>
+      <span class="navbar__divider" aria-hidden="true"></span>
+      <button type="button" class="navbar__logo" (click)="scrollToTop()">
+        <span class="navbar__logo-title">Montenegro in the EU</span>
+        <span class="navbar__logo-subtitle">International Conference</span>
+      </button>
+    </div>
+
+    <ul class="navbar__links" [class.open]="menuOpen()">
+      <li><button type="button" (click)="scrollTo('about')">About</button></li>
+      <li><button type="button" (click)="scrollTo('agenda')">Agenda</button></li>
+      <li><button type="button" (click)="scrollTo('speakers')">Speakers</button></li>
+      <li><button type="button" (click)="scrollTo('committee')">Committee</button></li>
+      <li><button type="button" (click)="scrollTo('venue')">Venue</button></li>
+      <li class="navbar__links-cta">
+        <a class="btn btn--primary btn--sm" [href]="info.registerUrl" target="_blank" rel="noopener noreferrer">
+          Register
+        </a>
+      </li>
+    </ul>
+
+    <div class="navbar__actions">
+      <a class="btn btn--primary btn--sm navbar__cta-mobile" [href]="info.registerUrl" target="_blank" rel="noopener noreferrer">
+        Register
+      </a>
+      <button
+        class="navbar__hamburger"
+        type="button"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Toggle navigation menu"
+      >
+        <span [class.open]="menuOpen()"></span>
+      </button>
+    </div>
+  </div>
+</nav>

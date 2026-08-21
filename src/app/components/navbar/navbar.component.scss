@@ -1,0 +1,211 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba($beige, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba($black, 0.08);
+  transition: box-shadow $transition-base, padding $transition-base;
+
+  &.scrolled {
+    box-shadow: $shadow-md;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  &__cof-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__cof-logo {
+    height: 34px;
+    width: auto;
+    display: block;
+  }
+
+  &__divider {
+    width: 1px;
+    height: 30px;
+    background: rgba($black, 0.15);
+    flex-shrink: 0;
+
+    @include responsive($bp-sm) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    min-width: 0;
+
+    &-title {
+      font-family: $font-display;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: $black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    &-subtitle {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: $gold-deep;
+
+      @include responsive($bp-sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+
+    li > button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: $gray-700;
+      border-radius: $radius-sm;
+      transition: color $transition-fast, background $transition-fast;
+
+      &:hover {
+        color: $gold-deep;
+        background: rgba($gold, 0.08);
+      }
+    }
+
+    &-cta {
+      margin-left: 8px;
+    }
+
+    @include responsive($bp-lg) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      background: $beige;
+      box-shadow: $shadow-lg;
+      padding: 12px;
+      gap: 4px;
+      transform: translateY(-140%);
+      opacity: 0;
+      transition: transform $transition-base, opacity $transition-base;
+
+      li {
+        width: 100%;
+      }
+
+      li > button {
+        width: 100%;
+        text-align: left;
+      }
+
+      &-cta {
+        margin-left: 0;
+        margin-top: 8px;
+
+        .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      &.open {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__actions {
+    display: none;
+    align-items: center;
+    gap: 12px;
+
+    @include responsive($bp-lg) {
+      display: flex;
+    }
+  }
+
+  &__cta-mobile {
+    @include responsive($bp-sm) {
+      display: none;
+    }
+  }
+
+  &__hamburger {
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+    span,
+    span::before,
+    span::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      height: 2px;
+      background: $black;
+      transition: transform $transition-fast, opacity $transition-fast;
+    }
+
+    span {
+      top: 15px;
+
+      &::before { top: -8px; }
+      &::after { top: 8px; }
+
+      &.open {
+        background: transparent;
+
+        &::before { transform: translateY(8px) rotate(45deg); }
+        &::after { transform: translateY(-8px) rotate(-45deg); }
+      }
+    }
+  }
+}

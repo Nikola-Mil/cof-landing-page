@@ -1,0 +1,36 @@
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img class="footer__logo" src="assets/images/logos/cof-logo-white.png" alt="Center for Finance" />
+      <p class="footer__title">Montenegro in the EU</p>
+      <p class="footer__tagline">International Conference · {{ info.dateRange }}</p>
+      <a class="footer__main-site" [href]="info.mainSiteUrl" target="_blank" rel="noopener noreferrer">
+        centerforfinance.me
+        <span class="material-icons-outlined">open_in_new</span>
+      </a>
+    </div>
+
+    <nav class="footer__links" aria-label="Footer navigation">
+      <h4>Conference</h4>
+      <button type="button" (click)="scrollTo('about')">About</button>
+      <button type="button" (click)="scrollTo('agenda')">Agenda</button>
+      <button type="button" (click)="scrollTo('speakers')">Speakers</button>
+      <button type="button" (click)="scrollTo('committee')">Committee</button>
+      <button type="button" (click)="scrollTo('venue')">Venue</button>
+    </nav>
+
+    <div class="footer__register">
+      <h4>Attend</h4>
+      <p>Registration is required to attend the conference in Podgorica.</p>
+      <a class="btn btn--primary btn--sm" [href]="info.registerUrl" target="_blank" rel="noopener noreferrer">
+        Register Now
+      </a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; {{ currentYear }} Center for Finance, Montenegro. {{ info.patronage }}.</p>
+    </div>
+  </div>
+</footer>

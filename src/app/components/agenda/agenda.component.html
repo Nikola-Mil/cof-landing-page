@@ -19,6 +19,7 @@
           [attr.aria-selected]="activeDay() === i"
           (click)="setDay(i)"
         >
+          <span class="material-icons-outlined agenda__tab-icon" aria-hidden="true">arrow_forward</span>
           <span class="agenda__tab-label">{{ day.label }}</span>
           <span class="agenda__tab-date">{{ day.date }}</span>
         </button>

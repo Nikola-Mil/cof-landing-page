@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { COMMITTEE } from '../../data/committee.data';
+import { Component, inject } from '@angular/core';
+import { I18nService } from '../../i18n/i18n.service';
 
 @Component({
   selector: 'app-committee',
@@ -8,7 +8,7 @@ import { COMMITTEE } from '../../data/committee.data';
   styleUrl: './committee.component.scss',
 })
 export class CommitteeComponent {
-  readonly members = COMMITTEE;
+  readonly i18n = inject(I18nService);
 
   initials(name: string): string {
     // Strip one or more leading academic titles (handles "Prof. Dr Name" as well as "Dr Name").

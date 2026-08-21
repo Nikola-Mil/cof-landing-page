@@ -1,13 +1,13 @@
 <section class="committee section section--alt" id="committee">
   <div class="container">
     <div class="section__title">
-      <span class="section__eyebrow">Organizing Committee</span>
-      <h2>Convened by Center for Finance & the Chamber of Commerce</h2>
-      <p>The academic and institutional leadership behind the conference, under the patronage of the President of Montenegro.</p>
+      <span class="section__eyebrow">{{ i18n.ui().committee.eyebrow }}</span>
+      <h2>{{ i18n.ui().committee.title }}</h2>
+      <p>{{ i18n.ui().committee.lead }}</p>
     </div>
 
     <div class="committee__grid">
-      @for (member of members; track member.name) {
+      @for (member of i18n.committee(); track member.name) {
         <div class="committee__card">
           <span class="committee__avatar">{{ initials(member.name) }}</span>
           <div>

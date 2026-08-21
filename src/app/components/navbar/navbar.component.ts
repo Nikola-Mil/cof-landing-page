@@ -1,5 +1,6 @@
-import { Component, HostListener, signal } from '@angular/core';
-import { CONFERENCE_INFO } from '../../data/conference-info.data';
+import { Component, HostListener, inject, signal } from '@angular/core';
+import { I18nService } from '../../i18n/i18n.service';
+import { Language } from '../../i18n/language';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { CONFERENCE_INFO } from '../../data/conference-info.data';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  readonly info = CONFERENCE_INFO;
+  readonly i18n = inject(I18nService);
   scrolled = signal(false);
   menuOpen = signal(false);
 
@@ -19,6 +20,10 @@ export class NavbarComponent {
 
   toggleMenu(): void {
     this.menuOpen.update((v) => !v);
+  }
+
+  setLanguage(lang: Language): void {
+    this.i18n.setLanguage(lang);
   }
 
   scrollTo(id: string): void {

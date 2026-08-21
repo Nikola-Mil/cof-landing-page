@@ -209,3 +209,38 @@
     }
   }
 }
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+
+  &__flag {
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 3px 4px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.4;
+    filter: grayscale(100%);
+    transition: opacity $transition-fast, filter $transition-fast;
+
+    .fi {
+      display: block;
+      border-radius: 2px;
+    }
+
+    &:hover {
+      opacity: 0.75;
+      filter: grayscale(40%);
+    }
+
+    &.active {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+  }
+}

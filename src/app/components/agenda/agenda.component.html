@@ -1,16 +1,15 @@
 <section class="agenda section section--alt" id="agenda">
   <div class="container">
     <div class="section__title">
-      <span class="section__eyebrow">Programme</span>
-      <h2>Two Days in Podgorica</h2>
+      <span class="section__eyebrow">{{ i18n.ui().agenda.eyebrow }}</span>
+      <h2>{{ i18n.ui().agenda.title }}</h2>
       <p>
-        A draft agenda combining keynote interviews, country panels, rapid-fire reform stories and
-        open policy debate.
+        {{ i18n.ui().agenda.lead }}
       </p>
     </div>
 
     <div class="agenda__tabs" role="tablist">
-      @for (day of days; track day.label; let i = $index) {
+      @for (day of i18n.agendaDays(); track day.label; let i = $index) {
         <button
           type="button"
           role="tab"
@@ -26,7 +25,7 @@
       }
     </div>
 
-    @for (day of days; track day.label; let i = $index) {
+    @for (day of i18n.agendaDays(); track day.label; let i = $index) {
       @if (activeDay() === i) {
         <div class="agenda__timeline">
           @for (session of day.sessions; track session.time + session.title) {
@@ -72,6 +71,6 @@
       }
     }
 
-    <p class="agenda__disclaimer">Draft agenda as of 11 June 2026 — programme and speakers subject to change.</p>
+    <p class="agenda__disclaimer">{{ i18n.ui().agenda.disclaimer }}</p>
   </div>
 </section>

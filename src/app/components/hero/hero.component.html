@@ -14,39 +14,39 @@
   </div>
 
   <div class="hero__content container">
-    <span class="hero__eyebrow">{{ info.kicker }}</span>
-    <h1 class="hero__title">{{ info.title }}</h1>
-    <p class="hero__tagline">{{ info.tagline }}</p>
+    <span class="hero__eyebrow">{{ i18n.info().kicker }}</span>
+    <h1 class="hero__title">{{ i18n.info().title }}</h1>
+    <p class="hero__tagline">{{ i18n.info().tagline }}</p>
 
     <p class="hero__lead">
-      Nine countries. A Nobel laureate. Two days of conversation about what EU accession actually means.
+      {{ i18n.ui().hero.lead }}
     </p>
 
     <div class="hero__meta">
       <div class="hero__meta-item">
         <span class="material-icons-outlined">event</span>
-        <span>{{ info.dateRange }}</span>
+        <span>{{ i18n.info().dateRange }}</span>
       </div>
       <div class="hero__meta-item">
         <span class="material-icons-outlined">location_on</span>
-        <span>{{ info.venue }}, Montenegro</span>
+        <span>{{ i18n.info().venueCountry }}</span>
       </div>
       <div class="hero__meta-item">
         <span class="material-icons-outlined">verified</span>
-        <span>{{ info.patronage }}</span>
+        <span>{{ i18n.info().patronage }}</span>
       </div>
     </div>
 
     <div class="hero__actions">
-      <a class="btn btn--primary" [href]="info.registerUrl" target="_blank" rel="noopener noreferrer">
-        Register Now
+      <a class="btn btn--primary" [href]="i18n.info().registerUrl" target="_blank" rel="noopener noreferrer">
+        {{ i18n.ui().hero.registerNow }}
         <span class="material-icons-outlined">arrow_forward</span>
       </a>
       <button type="button" class="btn btn--outline" (click)="scrollToSection('agenda')">
-        View Agenda
+        {{ i18n.ui().hero.viewAgenda }}
       </button>
     </div>
 
-    <p class="hero__hosts">Hosted by {{ info.hosts }}</p>
+    <p class="hero__hosts">{{ i18n.ui().hero.hostedBy }} {{ i18n.info().hosts }}</p>
   </div>
 </section>

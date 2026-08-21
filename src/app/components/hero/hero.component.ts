@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CONFERENCE_INFO } from '../../data/conference-info.data';
+import { Component, inject } from '@angular/core';
+import { I18nService } from '../../i18n/i18n.service';
 
 @Component({
   selector: 'app-hero',
@@ -8,7 +8,7 @@ import { CONFERENCE_INFO } from '../../data/conference-info.data';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  readonly info = CONFERENCE_INFO;
+  readonly i18n = inject(I18nService);
 
   scrollToSection(id: string): void {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CONFERENCE_INFO } from '../../data/conference-info.data';
+import { Component, inject } from '@angular/core';
+import { I18nService } from '../../i18n/i18n.service';
 
 @Component({
   selector: 'app-register-cta',
@@ -8,5 +8,5 @@ import { CONFERENCE_INFO } from '../../data/conference-info.data';
   styleUrl: './register-cta.component.scss',
 })
 export class RegisterCtaComponent {
-  readonly info = CONFERENCE_INFO;
+  readonly i18n = inject(I18nService);
 }

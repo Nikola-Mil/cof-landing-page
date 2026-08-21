@@ -1,36 +1,36 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <img class="footer__logo" src="assets/images/logos/cof-logo-white.png" alt="Center for Finance" />
-      <p class="footer__title">Montenegro in the EU</p>
-      <p class="footer__tagline">International Conference · {{ info.dateRange }}</p>
-      <a class="footer__main-site" [href]="info.mainSiteUrl" target="_blank" rel="noopener noreferrer">
+      <img class="footer__logo" src="assets/images/logos/cof-logo-white.png" [attr.alt]="i18n.ui().common.centerForFinanceAria" />
+      <p class="footer__title">{{ i18n.info().title }}</p>
+      <p class="footer__tagline">{{ i18n.info().kicker }} · {{ i18n.info().dateRange }}</p>
+      <a class="footer__main-site" [href]="i18n.info().mainSiteUrl" target="_blank" rel="noopener noreferrer">
         centerforfinance.me
         <span class="material-icons-outlined">open_in_new</span>
       </a>
     </div>
 
-    <nav class="footer__links" aria-label="Footer navigation">
-      <h4>Conference</h4>
-      <button type="button" (click)="scrollTo('about')">About</button>
-      <button type="button" (click)="scrollTo('agenda')">Agenda</button>
-      <button type="button" (click)="scrollTo('speakers')">Speakers</button>
-      <button type="button" (click)="scrollTo('committee')">Committee</button>
-      <button type="button" (click)="scrollTo('venue')">Venue</button>
+    <nav class="footer__links" [attr.aria-label]="i18n.ui().common.footerNavigation">
+      <h4>{{ i18n.ui().footer.conferenceHeading }}</h4>
+      <button type="button" (click)="scrollTo('about')">{{ i18n.ui().nav.about }}</button>
+      <button type="button" (click)="scrollTo('agenda')">{{ i18n.ui().nav.agenda }}</button>
+      <button type="button" (click)="scrollTo('speakers')">{{ i18n.ui().nav.speakers }}</button>
+      <button type="button" (click)="scrollTo('committee')">{{ i18n.ui().nav.committee }}</button>
+      <button type="button" (click)="scrollTo('venue')">{{ i18n.ui().nav.venue }}</button>
     </nav>
 
     <div class="footer__register">
-      <h4>Attend</h4>
-      <p>Registration is required to attend the conference in Podgorica.</p>
-      <a class="btn btn--primary btn--sm" [href]="info.registerUrl" target="_blank" rel="noopener noreferrer">
-        Register Now
+      <h4>{{ i18n.ui().footer.attendHeading }}</h4>
+      <p>{{ i18n.ui().footer.attendText }}</p>
+      <a class="btn btn--primary btn--sm" [href]="i18n.info().registerUrl" target="_blank" rel="noopener noreferrer">
+        {{ i18n.ui().footer.registerNow }}
       </a>
     </div>
   </div>
 
   <div class="footer__bottom">
     <div class="container">
-      <p>&copy; {{ currentYear }} Center for Finance, Montenegro. {{ info.patronage }}.</p>
+      <p>&copy; {{ currentYear }} {{ i18n.ui().footer.copyrightHolder }}. {{ i18n.info().patronage }}.</p>
     </div>
   </div>
 </footer>

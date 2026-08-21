@@ -1,16 +1,15 @@
 <section class="speakers section" id="speakers">
   <div class="container">
     <div class="section__title">
-      <span class="section__eyebrow">Speakers</span>
-      <h2>Voices from Nine EU Accession Stories</h2>
+      <span class="section__eyebrow">{{ i18n.ui().speakers.eyebrow }}</span>
+      <h2>{{ i18n.ui().speakers.title }}</h2>
       <p>
-        Economists, former ministers and policy leaders who helped shape — or closely studied — EU
-        accession across Central, Eastern and South-Eastern Europe. Tap a card to read the full bio.
+        {{ i18n.ui().speakers.lead }}
       </p>
     </div>
 
     <div class="speakers__grid">
-      @for (speaker of speakers; track speaker.id) {
+      @for (speaker of i18n.speakers(); track speaker.id) {
         <button type="button" class="speakers__card" (click)="open(speaker.id)">
           <span class="speakers__photo-wrap">
             <img [src]="speaker.photo" [alt]="speaker.name" loading="lazy" width="500" height="625" />
@@ -31,7 +30,7 @@
         [attr.aria-label]="speaker.name"
         (click)="$event.stopPropagation()"
       >
-        <button type="button" class="speakers__modal-close" (click)="close()" aria-label="Close speaker bio">
+        <button type="button" class="speakers__modal-close" (click)="close()" [attr.aria-label]="i18n.ui().common.closeSpeakerBio">
           <span class="material-icons-outlined">close</span>
         </button>
         <div class="speakers__modal-header">

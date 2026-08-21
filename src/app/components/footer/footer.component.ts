@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CONFERENCE_INFO } from '../../data/conference-info.data';
+import { Component, inject } from '@angular/core';
+import { I18nService } from '../../i18n/i18n.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +8,7 @@ import { CONFERENCE_INFO } from '../../data/conference-info.data';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  readonly info = CONFERENCE_INFO;
+  readonly i18n = inject(I18nService);
   readonly currentYear = new Date().getFullYear();
 
   scrollTo(id: string): void {

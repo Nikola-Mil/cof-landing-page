@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { AGENDA } from '../../data/agenda.data';
+import { I18nService } from '../../i18n/i18n.service';
 import { findSpeaker } from '../../data/speakers.data';
 import { SpeakerSelectionService } from '../../services/speaker-selection.service';
 
@@ -11,8 +11,8 @@ import { SpeakerSelectionService } from '../../services/speaker-selection.servic
 })
 export class AgendaComponent {
   private readonly speakerSelection = inject(SpeakerSelectionService);
+  readonly i18n = inject(I18nService);
 
-  readonly days = AGENDA;
   readonly activeDay = signal(0);
 
   setDay(index: number): void {
@@ -20,7 +20,7 @@ export class AgendaComponent {
   }
 
   speakerName(id: string): string {
-    return findSpeaker(id)?.name ?? id;
+    return findSpeaker(id, this.i18n.lang())?.name ?? id;
   }
 
   openSpeaker(id: string): void {

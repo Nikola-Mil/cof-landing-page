@@ -1,39 +1,53 @@
-<nav class="navbar" role="navigation" aria-label="Main navigation" [class.scrolled]="scrolled()">
+<nav class="navbar" role="navigation" [attr.aria-label]="i18n.ui().common.mainNavigation" [class.scrolled]="scrolled()">
   <div class="navbar__inner container">
     <div class="navbar__brand">
-      <a class="navbar__cof-link" href="https://centerforfinance.me/" target="_blank" rel="noopener noreferrer" aria-label="Center for Finance">
-        <img class="navbar__cof-logo" src="assets/images/logos/cof-logo-black.png" alt="Center for Finance" />
+      <a class="navbar__cof-link" href="https://centerforfinance.me/" target="_blank" rel="noopener noreferrer" [attr.aria-label]="i18n.ui().common.centerForFinanceAria">
+        <img class="navbar__cof-logo" src="assets/images/logos/cof-logo-black.png" [attr.alt]="i18n.ui().common.centerForFinanceAria" />
       </a>
       <span class="navbar__divider" aria-hidden="true"></span>
       <button type="button" class="navbar__logo" (click)="scrollToTop()">
-        <span class="navbar__logo-title">Montenegro in the EU</span>
-        <span class="navbar__logo-subtitle">International Conference</span>
+        <span class="navbar__logo-title">{{ i18n.info().title }}</span>
+        <span class="navbar__logo-subtitle">{{ i18n.info().kicker }}</span>
       </button>
     </div>
 
     <ul class="navbar__links" [class.open]="menuOpen()">
-      <li><button type="button" (click)="scrollTo('about')">About</button></li>
-      <li><button type="button" (click)="scrollTo('agenda')">Agenda</button></li>
-      <li><button type="button" (click)="scrollTo('speakers')">Speakers</button></li>
-      <li><button type="button" (click)="scrollTo('committee')">Committee</button></li>
-      <li><button type="button" (click)="scrollTo('venue')">Venue</button></li>
+      <li><button type="button" (click)="scrollTo('about')">{{ i18n.ui().nav.about }}</button></li>
+      <li><button type="button" (click)="scrollTo('agenda')">{{ i18n.ui().nav.agenda }}</button></li>
+      <li><button type="button" (click)="scrollTo('speakers')">{{ i18n.ui().nav.speakers }}</button></li>
+      <li><button type="button" (click)="scrollTo('committee')">{{ i18n.ui().nav.committee }}</button></li>
+      <li><button type="button" (click)="scrollTo('venue')">{{ i18n.ui().nav.venue }}</button></li>
       <li class="navbar__links-cta">
-        <a class="btn btn--primary btn--sm" [href]="info.registerUrl" target="_blank" rel="noopener noreferrer">
-          Register
+        <a class="btn btn--primary btn--sm" [href]="i18n.info().registerUrl" target="_blank" rel="noopener noreferrer">
+          {{ i18n.ui().nav.register }}
         </a>
       </li>
     </ul>
 
+    <div class="lang-switcher" role="radiogroup" [attr.aria-label]="i18n.ui().common.language">
+      @for (lang of i18n.availableLanguages; track lang.code) {
+        <button
+          type="button"
+          class="lang-switcher__flag"
+          [class.active]="lang.code === i18n.lang()"
+          (click)="setLanguage(lang.code)"
+          [attr.aria-label]="lang.label"
+          role="radio"
+          [attr.aria-checked]="lang.code === i18n.lang()"
+        ><span class="fi fi-{{ lang.flagCode }}"></span></button>
+      }
+    </div>
+
     <div class="navbar__actions">
-      <a class="btn btn--primary btn--sm navbar__cta-mobile" [href]="info.registerUrl" target="_blank" rel="noopener noreferrer">
-        Register
+      <a class="btn btn--primary btn--sm navbar__cta-mobile" [href]="i18n.info().registerUrl" target="_blank" rel="noopener noreferrer">
+        {{ i18n.ui().nav.register }}
       </a>
       <button
         class="navbar__hamburger"
         type="button"
         (click)="toggleMenu()"
         [attr.aria-expanded]="menuOpen()"
-        aria-label="Toggle navigation menu"
+        [attr.aria-label]="i18n.ui().common.toggleMenu"
       >
         <span [class.open]="menuOpen()"></span>
       </button>

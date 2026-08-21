@@ -1,5 +1,5 @@
 import { Component, HostListener, computed, inject } from '@angular/core';
-import { SPEAKERS } from '../../data/speakers.data';
+import { I18nService } from '../../i18n/i18n.service';
 import { SpeakerSelectionService } from '../../services/speaker-selection.service';
 
 @Component({
@@ -10,10 +10,10 @@ import { SpeakerSelectionService } from '../../services/speaker-selection.servic
 })
 export class SpeakersComponent {
   private readonly speakerSelection = inject(SpeakerSelectionService);
+  readonly i18n = inject(I18nService);
 
-  readonly speakers = SPEAKERS;
   readonly selected = computed(() =>
-    this.speakers.find((s) => s.id === this.speakerSelection.activeSpeakerId()),
+    this.i18n.speakers().find((s) => s.id === this.speakerSelection.activeSpeakerId()),
   );
 
   open(id: string): void {

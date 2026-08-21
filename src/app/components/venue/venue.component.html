@@ -1,27 +1,27 @@
 <section class="venue section" id="venue">
   <div class="container">
     <div class="section__title">
-      <span class="section__eyebrow">Venue</span>
-      <h2>Where to Find Us</h2>
-      <p>The conference takes place in Podgorica, the capital of Montenegro.</p>
+      <span class="section__eyebrow">{{ i18n.ui().venue.eyebrow }}</span>
+      <h2>{{ i18n.ui().venue.title }}</h2>
+      <p>{{ i18n.ui().venue.lead }}</p>
     </div>
 
     <div class="venue__layout">
       <div class="venue__details">
         <span class="material-icons-outlined venue__icon">location_city</span>
-        <h3>{{ info.venue }}</h3>
-        <p>{{ info.city }}</p>
-        <p class="venue__dates">{{ info.dateLong }}</p>
+        <h3>{{ i18n.info().venue }}</h3>
+        <p>{{ i18n.info().city }}</p>
+        <p class="venue__dates">{{ i18n.info().dateLong }}</p>
         <a class="btn btn--outline btn--sm" [href]="directionsUrl" target="_blank" rel="noopener noreferrer">
-          Get Directions
+          {{ i18n.ui().venue.getDirections }}
           <span class="material-icons-outlined">open_in_new</span>
         </a>
 
         <div class="venue__note">
           <span class="material-icons-outlined">local_bar</span>
           <div>
-            <h4>Welcome Dinner — Villa Gorica</h4>
-            <p>Hosted by the President of Montenegro on the evening of 15 October, featuring keynote remarks ahead of the working day.</p>
+            <h4>{{ i18n.ui().venue.dinnerTitle }}</h4>
+            <p>{{ i18n.ui().venue.dinnerText }}</p>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
       <div class="venue__map">
         <iframe
           [src]="mapEmbedUrl"
-          title="Map showing Hilton Podgorica"
+          [attr.title]="i18n.ui().venue.mapTitle"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>

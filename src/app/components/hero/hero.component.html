@@ -21,9 +21,14 @@
       <span class="hero__patron" [attr.title]="i18n.ui().common.patronMontenegro">
         <img class="hero__patron-logo hero__patron-logo--coa" src="assets/images/partners/coat-of-arms-montenegro.svg" [attr.alt]="i18n.ui().common.patronMontenegro" />
       </span>
+      <span class="hero__patron-divider" aria-hidden="true"></span>
       <span class="hero__patron" [attr.title]="i18n.ui().common.patronChamber">
-        <img class="hero__patron-logo" src="assets/images/partners/chamber-of-commerce.png" [attr.alt]="i18n.ui().common.patronChamber" />
+        <img class="hero__patron-logo hero__patron-logo--chamber" src="assets/images/partners/chamber-of-commerce.png" [attr.alt]="i18n.ui().common.patronChamber" />
       </span>
+      <span class="hero__patron-divider" aria-hidden="true"></span>
+      <a class="hero__patron" href="https://centerforfinance.me/" target="_blank" rel="noopener noreferrer" [attr.aria-label]="i18n.ui().common.centerForFinanceAria">
+        <img class="hero__patron-logo hero__patron-logo--cof" src="assets/images/logos/cof-logo-black.png" [attr.alt]="i18n.ui().common.centerForFinanceAria" />
+      </a>
     </div>
     <span class="hero__eyebrow">{{ i18n.info().kicker }}</span>
     <h1 class="hero__title">{{ i18n.info().title }}</h1>

@@ -39,6 +39,16 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
+      id: 'enrico-letta',
+      name: 'Enrico Letta',
+      title: 'Former Prime Minister of Italy',
+      photo: 'assets/images/speakers/enrico-letta.jpg',
+      bio: [
+        'Enrico Letta served as Prime Minister of Italy from 2013 to 2014.',
+        'Full biography to follow.',
+      ],
+    },
+    {
       id: 'marek-dabrowski',
       name: 'Marek Dabrowski',
       title: 'Non-Resident Fellow, Bruegel; Co-Founder, CASE',
@@ -240,6 +250,16 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
         'Tokom 2015–2016. bio je glavni savjetnik ministra finansija Ukrajine i savjetnik ministra ekonomskog razvoja i trgovine Ukrajine. Od aprila 2016. do avgusta 2019. bio je glavni ekonomski savjetnik premijera Ukrajine, a od novembra 2019. do marta 2020. ekonomski savjetnik premijera Ukrajine. U periodu 2016–2020. predsjedavao je Strateškom savjetodavnom grupom za podršku ukrajinskim reformama (SAGSUR) i suosnovao ukrajinski ekonomski tink-tenk Centar za ekonomsku strategiju. Bio je savjetnik premijera Moldavije (2021–2022), a od marta 2022. do juna 2024. savjetnik predsjednika Slovačke Republike za ekonomsku politiku.',
         'Ivan Miklos je bio jedna od vodećih ličnosti ekonomske transformacije Slovačke Republike. Značajno je doprinio ulasku zemlje u OECD i predvodio je obimnu i djelotvornu poresku reformu, kao i vladinu agendu ekonomskog restrukturiranja i fiskalne konsolidacije. Reformska vlada iz perioda 2002–2006. kombinovala je stroge mjere štednje sa sveobuhvatnim programom strukturnih reformi u oblasti poreza, socijalnog sektora, penzija, zdravstva, javnih finansija i tržišta rada — reformama koje su pomogle Slovačkoj da 2009. godine uđe u evrozonu. Godine 2004. proglašen je za „Najboljeg ministra finansija godine" od strane Euromoney-ja i za „Vodećeg poslovnog reformatora" u izvještaju Svjetske banke Doing Business.',
         'Autor je knjiga „Book of Reforms" (2005) i „Rewriting the Rules" (2001), kao i poglavlja o slovačkim reformama u knjizi „The Great Rebirth: Lessons from the Victory of Capitalism over Communism" (2014). Godine 2019. vodio je izradu publikacije SAGSUR-a „Reforms in Ukraine after the Revolution of Dignity", za koju je napisao poglavlje o političkoj ekonomiji reformi.',
+      ],
+    },
+    {
+      id: 'enrico-letta',
+      name: 'Enrico Letta',
+      title: 'Bivši premijer Italije',
+      photo: 'assets/images/speakers/enrico-letta.jpg',
+      bio: [
+        'Enrico Letta je bio premijer Italije od 2013. do 2014. godine.',
+        'Puna biografija slijedi.',
       ],
     },
     {

@@ -2,7 +2,8 @@ import { AgendaDay } from '../models/agenda.model';
 import { Language } from '../i18n/language';
 
 // Source: "Montenegro in the EU Conference -- Draft Agenda" (as of June 11, 2026),
-// supplied by Center for Finance.
+// supplied by Center for Finance. Timings and the opening keynote line-up updated
+// per the "konferencija (1).pdf" agenda revision.
 export const AGENDA: Record<Language, AgendaDay[]> = {
   en: [
     {
@@ -47,16 +48,16 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
           type: 'session',
         },
         {
-          time: '09:30 – 10:00',
+          time: '09:30 – 10:15',
           title: 'Opening Keynote: The Next Europe — Enlargement, Institutions, and Convergence',
           description: [
             'A moderated keynote conversation, rather than a traditional speech, setting the broader strategic context for enlargement, convergence, and Montenegro\'s European future.',
           ],
           type: 'keynote',
-          speakerIds: ['marek-dabrowski'],
+          speakerIds: ['enrico-letta', 'marek-dabrowski'],
         },
         {
-          time: '10:00 – 11:45',
+          time: '10:15 – 12:00',
           title: 'Panel I — What Actually Worked? What Did Not Work? Why? Lessons from the New EU Member States',
           description: [
             'Three successive country-group conversations on the results of accession, which reforms changed economic trajectories, and the single most important policy lesson for Montenegro and other candidate countries.',
@@ -72,12 +73,12 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
           ],
         },
         {
-          time: '11:45 – 12:05',
+          time: '12:00 – 12:20',
           title: 'Coffee Break',
           type: 'break',
         },
         {
-          time: '12:05 – 13:15',
+          time: '12:20 – 13:30',
           title: 'Rapid Fire: Select Reform Stories — Three Countries, Three Key Reforms and Outcomes',
           description: [
             'A TED-style session of short, practical country presentations (10–12 minutes each) on one transformative reform per country.',
@@ -89,7 +90,7 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
           speakerIds: ['madis-muller', 'inna-steinbuka', 'rastislav-vrbensky', 'jan-marusinec', 'ivan-miklos'],
         },
         {
-          time: '13:15 – 14:15',
+          time: '13:30 – 14:30',
           title: 'Networking Lunch',
           description: [
             'Thematic tables on macroeconomic management, regional connectivity, finance and investment climate, tourism, environment & sustainability, rule of law and judiciary reform, energy transition, and AI & digitalization.',
@@ -97,23 +98,24 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
           type: 'break',
         },
         {
-          time: '14:15 – 15:30',
+          time: '14:30 – 15:45',
           title: 'Panel II — Igniting Productivity Growth and Economic Transformation',
           description: [
             'Can Montenegro avoid the middle-income trap and achieve high-income status? A moderated discussion on productivity, FDI, innovation and EU convergence in the Western Balkans, with short presentations on the evidence and its implications for Montenegro.',
+            'Moderated by Željko Bogetić, Academic Director of the Conference.',
           ],
           type: 'panel',
           speakerIds: ['johannes-fedderke', 'alexander-plekhanov', 'zsoka-koczan', 'pavle-petrovic', 'zeljko-bogetic'],
         },
         {
-          time: '15:30 – 16:15',
+          time: '15:45 – 16:30',
           title: 'Institutions and Development: Lessons for EU and Montenegro\'s Accession',
           description: ['Presentation by James Robinson, University of Chicago, 2024 Nobel Laureate in Economics (by videoconference).'],
           type: 'keynote',
           speakerIds: ['james-robinson'],
         },
         {
-          time: '16:15 – 16:45',
+          time: '16:30 – 17:00',
           title: 'Closing Remarks — Issues and Policy Directions',
           description: [
             'Instead of formal closing remarks: brief, high-level reflections on three key lessons and a vision of Montenegro\'s transformation beyond accession — its long-term economic vision, governance and institutions, and Europe after accession.',
@@ -166,16 +168,16 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
           type: 'session',
         },
         {
-          time: '09:30 – 10:00',
+          time: '09:30 – 10:15',
           title: 'Uvodno izlaganje: Naredna Evropa — proširenje, institucije i konvergencija',
           description: [
             'Moderirani uvodni razgovor, umjesto tradicionalnog govora, koji postavlja širi strateški okvir za proširenje, konvergenciju i evropsku budućnost Crne Gore.',
           ],
           type: 'keynote',
-          speakerIds: ['marek-dabrowski'],
+          speakerIds: ['enrico-letta', 'marek-dabrowski'],
         },
         {
-          time: '10:00 – 11:45',
+          time: '10:15 – 12:00',
           title: 'Panel I — Šta je zaista funkcionisalo? Šta nije funkcionisalo? Zašto? Iskustva novih država članica EU',
           description: [
             'Tri uzastopna razgovora sa grupama zemalja o rezultatima pristupanja, reformama koje su promijenile ekonomske tokove i jednoj najvažnijoj pouci za Crnu Goru i druge zemlje kandidate.',
@@ -191,12 +193,12 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
           ],
         },
         {
-          time: '11:45 – 12:05',
+          time: '12:00 – 12:20',
           title: 'Pauza za kafu',
           type: 'break',
         },
         {
-          time: '12:05 – 13:15',
+          time: '12:20 – 13:30',
           title: 'Brze priče: odabrane reforme — tri zemlje, tri ključne reforme i njihovi rezultati',
           description: [
             'Sesija u TED stilu sa kratkim, praktičnim prezentacijama zemalja (po 10 do 12 minuta) o po jednoj transformativnoj reformi za svaku zemlju.',
@@ -208,7 +210,7 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
           speakerIds: ['madis-muller', 'inna-steinbuka', 'rastislav-vrbensky', 'jan-marusinec', 'ivan-miklos'],
         },
         {
-          time: '13:15 – 14:15',
+          time: '13:30 – 14:30',
           title: 'Ručak uz umrežavanje',
           description: [
             'Tematski stolovi o makroekonomskom upravljanju, regionalnoj povezanosti, finansijama i investicionoj klimi, turizmu, životnoj sredini i održivosti, vladavini prava i reformi pravosuđa, energetskoj tranziciji i vještačkoj inteligenciji i digitalizaciji.',
@@ -216,23 +218,24 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
           type: 'break',
         },
         {
-          time: '14:15 – 15:30',
+          time: '14:30 – 15:45',
           title: 'Panel II — Podsticanje rasta produktivnosti i ekonomske transformacije',
           description: [
             'Može li Crna Gora izbjeći zamku srednjeg dohotka i dostići status visokog dohotka? Moderirana diskusija o produktivnosti, stranim direktnim investicijama, inovacijama i konvergenciji sa EU na Zapadnom Balkanu, sa kratkim prezentacijama dokaza i njihovih implikacija za Crnu Goru.',
+            'Moderira Željko Bogetić, akademski direktor konferencije.',
           ],
           type: 'panel',
           speakerIds: ['johannes-fedderke', 'alexander-plekhanov', 'zsoka-koczan', 'pavle-petrovic', 'zeljko-bogetic'],
         },
         {
-          time: '15:30 – 16:15',
+          time: '15:45 – 16:30',
           title: 'Institucije i razvoj: pouke za pristupanje EU i Crne Gore',
           description: ['Izlaganje Jamesa Robinsona, Univerzitet u Čikagu, dobitnika Nobelove nagrade za ekonomiju 2024. godine (putem videokonferencije).'],
           type: 'keynote',
           speakerIds: ['james-robinson'],
         },
         {
-          time: '16:15 – 16:45',
+          time: '16:30 – 17:00',
           title: 'Završna riječ — izazovi i pravci politika',
           description: [
             'Umjesto formalne završne riječi: kratka razmatranja na visokom nivou o tri ključne pouke i viziji transformacije Crne Gore nakon pristupanja — njenoj dugoročnoj ekonomskoj viziji, upravljanju i institucijama, te Evropi nakon pristupanja.',

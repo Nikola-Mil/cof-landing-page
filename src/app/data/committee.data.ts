@@ -11,6 +11,7 @@ export const COMMITTEE: Record<Language, CommitteeMember[]> = {
     {
       name: 'Dr Nina Drakić',
       role: 'President, Chamber of Commerce of Montenegro',
+      photo: 'assets/images/committee/nina-drakic.jpg',
     },
     {
       name: 'Prof. Dr Mojmir Mrak',

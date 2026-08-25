@@ -32,16 +32,54 @@
     min-width: 0;
   }
 
-  &__cof-link {
+  &__patrons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+
+    @include responsive($bp-sm) {
+      gap: 10px;
+    }
+  }
+
+  &__patron {
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    opacity: 0.92;
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--collapsible {
+      @include responsive($bp-sm) {
+        display: none;
+      }
+    }
   }
 
-  &__cof-logo {
-    height: 34px;
+  &__patron-logo {
+    height: 32px;
     width: auto;
+    max-width: 68px;
+    object-fit: contain;
     display: block;
+
+    &--coa {
+      height: 36px;
+    }
+
+    @include responsive($bp-sm) {
+      height: 26px;
+      max-width: 52px;
+
+      &.navbar__patron-logo--coa {
+        height: 30px;
+      }
+    }
   }
 
   &__divider {

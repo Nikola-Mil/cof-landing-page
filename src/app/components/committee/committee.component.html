@@ -9,7 +9,13 @@
     <div class="committee__grid">
       @for (member of i18n.committee(); track member.name) {
         <div class="committee__card">
-          <span class="committee__avatar">{{ initials(member.name) }}</span>
+          @if (member.photo) {
+            <span class="committee__avatar committee__avatar--photo">
+              <img [src]="member.photo" [alt]="member.name" />
+            </span>
+          } @else {
+            <span class="committee__avatar">{{ initials(member.name) }}</span>
+          }
           <div>
             <h3>{{ member.name }}</h3>
             <p>{{ member.role }}</p>

@@ -7,6 +7,8 @@ export const COMMITTEE: Record<Language, CommitteeMember[]> = {
     {
       name: 'Dr Željko Bogetić',
       role: 'Academic Director and Chair of the Organizing Committee; Fellow, Johns Hopkins University Institute for Applied Economics, Global Health, and the Study of Business Enterprise, Baltimore, U.S.',
+      photo: 'assets/images/speakers/zeljko-bogetic.jpg',
+      photoPosition: 'center 25%',
     },
     {
       name: 'Dr Nina Drakić',
@@ -17,6 +19,8 @@ export const COMMITTEE: Record<Language, CommitteeMember[]> = {
     {
       name: 'Prof. Dr Mojmir Mrak',
       role: 'Academic Co-Director; University of Ljubljana, Slovenia',
+      photo: 'assets/images/speakers/mojmir-mrak.jpg',
+      photoPosition: 'center 25%',
     },
     {
       name: 'Prof. Dr Igor Lukšić',
@@ -65,6 +69,8 @@ export const COMMITTEE: Record<Language, CommitteeMember[]> = {
     {
       name: 'Dr Željko Bogetić',
       role: 'Akademski direktor i predsjednik Organizacionog odbora; stipendista, Institut za primijenjenu ekonomiju, globalno zdravlje i proučavanje poslovnih poduhvata Univerziteta Johns Hopkins, Baltimor, SAD.',
+      photo: 'assets/images/speakers/zeljko-bogetic.jpg',
+      photoPosition: 'center 25%',
     },
     {
       name: 'Dr Nina Drakić',
@@ -75,6 +81,8 @@ export const COMMITTEE: Record<Language, CommitteeMember[]> = {
     {
       name: 'Prof. dr Mojmir Mrak',
       role: 'Akademski ko-direktor; Univerzitet u Ljubljani, Slovenija',
+      photo: 'assets/images/speakers/mojmir-mrak.jpg',
+      photoPosition: 'center 25%',
     },
     {
       name: 'Prof. dr Igor Lukšić',

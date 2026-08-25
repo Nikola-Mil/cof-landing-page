@@ -17,6 +17,14 @@
   </div>
 
   <div class="hero__content container">
+    <div class="hero__patrons" [attr.aria-label]="i18n.ui().common.patronsAria">
+      <span class="hero__patron" [attr.title]="i18n.ui().common.patronMontenegro">
+        <img class="hero__patron-logo hero__patron-logo--coa" src="assets/images/partners/coat-of-arms-montenegro.svg" [attr.alt]="i18n.ui().common.patronMontenegro" />
+      </span>
+      <span class="hero__patron" [attr.title]="i18n.ui().common.patronChamber">
+        <img class="hero__patron-logo" src="assets/images/partners/chamber-of-commerce.png" [attr.alt]="i18n.ui().common.patronChamber" />
+      </span>
+    </div>
     <span class="hero__eyebrow">{{ i18n.info().kicker }}</span>
     <h1 class="hero__title">{{ i18n.info().title }}</h1>
     <p class="hero__tagline">{{ i18n.info().tagline }}</p>

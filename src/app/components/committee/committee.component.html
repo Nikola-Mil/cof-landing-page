@@ -14,7 +14,7 @@
         <div class="committee__card">
           @if (member.photo) {
             <span class="committee__avatar committee__avatar--photo">
-              <img [src]="member.photo" [alt]="member.name" />
+              <img [src]="member.photo" [alt]="member.name" [style.object-position]="member.photoPosition" />
             </span>
           } @else {
             <span class="committee__avatar">{{ initials(member.name) }}</span>

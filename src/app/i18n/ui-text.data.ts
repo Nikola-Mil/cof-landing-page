@@ -22,6 +22,7 @@ export interface UiText {
     patronsAria: string;
     patronageLabel: string;
     patronMontenegro: string;
+    patronCaption: string;
     patronChamber: string;
   };
   nav: {
@@ -98,6 +99,7 @@ export const UI_TEXT: Record<Language, UiText> = {
       patronsAria: 'Held under the patronage of the President of Montenegro, in partnership with the Chamber of Commerce of Montenegro and Center for Finance',
       patronageLabel: 'Under the patronage of',
       patronMontenegro: 'Under the patronage of the President of Montenegro',
+      patronCaption: 'President of Montenegro',
       patronChamber: 'Chamber of Commerce of Montenegro',
     },
     nav: {
@@ -203,6 +205,7 @@ export const UI_TEXT: Record<Language, UiText> = {
       patronsAria: 'Pod pokroviteljstvom Predsjednika Crne Gore, u partnerstvu sa Privrednom komorom Crne Gore i Centrom za finansije',
       patronageLabel: 'Pod pokroviteljstvom',
       patronMontenegro: 'Pod pokroviteljstvom Predsjednika Crne Gore',
+      patronCaption: 'Predsjednik Crne Gore',
       patronChamber: 'Privredna komora Crne Gore',
     },
     nav: {

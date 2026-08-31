@@ -20,6 +20,7 @@ export interface UiText {
     closeSpeakerBio: string;
     language: string;
     patronsAria: string;
+    patronageLabel: string;
     patronMontenegro: string;
     patronChamber: string;
   };
@@ -95,6 +96,7 @@ export const UI_TEXT: Record<Language, UiText> = {
       closeSpeakerBio: 'Close speaker bio',
       language: 'Language',
       patronsAria: 'Held under the patronage of the President of Montenegro, in partnership with the Chamber of Commerce of Montenegro and Center for Finance',
+      patronageLabel: 'Under the patronage of',
       patronMontenegro: 'Under the patronage of the President of Montenegro',
       patronChamber: 'Chamber of Commerce of Montenegro',
     },
@@ -199,6 +201,7 @@ export const UI_TEXT: Record<Language, UiText> = {
       closeSpeakerBio: 'Zatvori biografiju govornika',
       language: 'Jezik',
       patronsAria: 'Pod pokroviteljstvom Predsjednika Crne Gore, u partnerstvu sa Privrednom komorom Crne Gore i Centrom za finansije',
+      patronageLabel: 'Pod pokroviteljstvom',
       patronMontenegro: 'Pod pokroviteljstvom Predsjednika Crne Gore',
       patronChamber: 'Privredna komora Crne Gore',
     },

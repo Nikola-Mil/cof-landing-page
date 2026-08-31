@@ -21,7 +21,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center 55%;
-      opacity: 0.45;
+      opacity: 0.56;
     }
 
     &::after {
@@ -234,6 +234,15 @@
     .btn {
       font-size: 1rem;
       padding: 15px 30px;
+    }
+
+    .btn--primary {
+      font-size: 1.15rem;
+      padding: 19px 40px;
+
+      .material-icons-outlined {
+        font-size: 1.3rem;
+      }
     }
   }
 

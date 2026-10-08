@@ -52,7 +52,7 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
               moderator: 'Moderated by Davor Kunc, Head of EIB Representation to Montenegro',
               members: [
                 'Slovenia — Mojmir Mrak, Professor and Jean Monnet Chair, University of Ljubljana',
-                'Croatia — Roko Tolić, former Deputy Mayor of Dubrovnik and former Director of Dubrovnik Airport',
+                'Croatia — Roko Tolić, former Deputy Mayor of Dubrovnik and former Director of Dubrovnik Airport, CEO of Airports of Montenegro',
                 'Slovakia — Jan Marusinec, MESA10, former Advisor at the Slovak Ministry of Finance',
               ],
             },
@@ -180,7 +180,7 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
               moderator: 'Moderira Davor Kunc, šef predstavništva EIB-a u Crnoj Gori',
               members: [
                 'Slovenija — Mojmir Mrak, profesor i nosilac Jean Monnet katedre, Univerzitet u Ljubljani',
-                'Hrvatska — Roko Tolić, bivši zamjenik gradonačelnika Dubrovnika i bivši direktor Zračne luke Dubrovnik',
+                'Hrvatska — Roko Tolić, bivši zamjenik gradonačelnika Dubrovnika i bivši direktor Zračne luke Dubrovnik, izvršni direktor Aerodroma Crne Gore',
                 'Slovačka — Jan Marusinec, MESA10, bivši savjetnik u Ministarstvu finansija Slovačke',
               ],
             },

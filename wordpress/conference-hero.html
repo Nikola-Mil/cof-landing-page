@@ -1,0 +1,470 @@
+<!--
+  Konferencija "Crna Gora u EU" — hero blok za WordPress code modul.
+  Samostalan: HTML + CSS + JS u jednom fajlu, bez ijedne eksterne biblioteke.
+  Sve slike se učitavaju sa https://centerforfinance.me/landing-page/ (već su online).
+  Svi CSS selektori su ograničeni na .cofw — ništa ne curi u temu sajta.
+-->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+.cofw {
+  /* Paleta konferencije — promijenite ovdje ako zatreba */
+  --cofw-gold: #a87013;
+  --cofw-gold-deep: #8a5c0f;
+  --cofw-gold-tint: #f3e4cc;
+  --cofw-beige: #fcf3e9;
+  --cofw-beige-dark: #f4e5d1;
+  --cofw-black: #14110d;
+  --cofw-gray-500: #7d715d;
+  --cofw-gray-600: #5c5346;
+  --cofw-gray-700: #423c33;
+  --cofw-gray-800: #2a251e;
+  --cofw-white: #ffffff;
+
+  /* Ako fiksno zaglavlje teme prekriva vrh bloka, stavite npr. calc(100vh - 80px) */
+  --cofw-min-height: 100vh;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  min-height: var(--cofw-min-height);
+  background: var(--cofw-beige);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--cofw-gray-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* dvh rješava "skakanje" pune visine na mobilnim browserima */
+@supports (height: 100dvh) {
+  .cofw { --cofw-min-height: 100dvh; }
+}
+
+.cofw,
+.cofw *,
+.cofw *::before,
+.cofw *::after { box-sizing: border-box; }
+
+/* Neutralizacija stilova WordPress teme.
+   :where() drži specifičnost na nuli, pa svako pravilo ispod ovoga pobjeđuje
+   bez ijednog !important — a ništa izvan .cofw nije dirnuto. */
+.cofw :where(h1, p, span, div, a, img, svg) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  line-height: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: inherit;
+  color: inherit;
+  background: none;
+}
+
+.cofw :where(a) { text-decoration: none; }
+.cofw :where(img) { display: block; max-width: 100%; height: auto; }
+.cofw :where(svg) { display: block; }
+
+/* ===== Pozadina ===== */
+.cofw__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cofw__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  opacity: 0.68;
+}
+
+.cofw__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, #fcf3e9 8%, rgba(252, 243, 233, 0.4) 42%, rgba(252, 243, 233, 0.22) 100%);
+}
+
+.cofw__lines {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cofw__lines svg { width: 100%; height: 100%; }
+
+.cofw__lines path {
+  fill: none;
+  stroke: var(--cofw-gold);
+  stroke-width: 1.5;
+  opacity: 0.25;
+}
+
+.cofw__mountains {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cofw__mountains svg { width: 100%; height: 100%; display: block; }
+.cofw__mountains .cofw-mtn--back { fill: var(--cofw-gold-tint); opacity: 0.7; }
+.cofw__mountains .cofw-mtn--front { fill: var(--cofw-beige-dark); }
+
+/* ===== Sadržaj ===== */
+.cofw__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px 92px;
+}
+
+.cofw__inner { max-width: 780px; margin: 0 auto; }
+
+/* ===== Traka pokrovitelja ===== */
+.cofw__patrons { margin-bottom: 36px; }
+
+.cofw__patrons-label {
+  display: block;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--cofw-gray-600);
+  margin-bottom: 16px;
+}
+
+.cofw__patrons-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cofw__patron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.cofw__patron:hover { opacity: 1; }
+
+.cofw__patron-divider {
+  width: 1px;
+  height: 72px;
+  background: rgba(20, 17, 13, 0.18);
+  flex-shrink: 0;
+}
+
+.cofw__patron-logo {
+  height: 70px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.cofw__patron-logo--cof { height: 64px; }
+.cofw__patron-logo--coa { height: 116px; }
+
+/* ===== Naslovni blok ===== */
+.cofw__eyebrow {
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cofw-black);
+}
+
+.cofw__eyebrow::before,
+.cofw__eyebrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 2px;
+  background: var(--cofw-gold);
+}
+
+.cofw__eyebrow::before { left: 0; }
+.cofw__eyebrow::after { right: 0; }
+
+.cofw__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: var(--cofw-black);
+  margin-bottom: 8px;
+}
+
+.cofw__tagline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  color: var(--cofw-gold-deep);
+  margin-bottom: 28px;
+}
+
+.cofw__lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--cofw-gray-700);
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+/* ===== Datum / lokacija ===== */
+.cofw__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.cofw__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cofw-white);
+  border: 1px solid rgba(20, 17, 13, 0.08);
+  border-radius: 50px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cofw-gray-800);
+  box-shadow: 0 1px 3px rgba(20, 17, 13, 0.08);
+}
+
+.cofw__meta-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--cofw-gold-deep);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ===== Dugmad ===== */
+.cofw__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cofw__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cofw__btn--primary {
+  background: var(--cofw-gold-deep);
+  color: var(--cofw-white);
+  border: 0;
+  font-size: 1.15rem;
+  padding: 19px 40px;
+}
+
+.cofw__btn--primary:hover,
+.cofw__btn--primary:focus {
+  background: var(--cofw-black);
+  color: var(--cofw-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(138, 92, 15, 0.4);
+}
+
+.cofw a:focus-visible,
+.cofw button:focus-visible {
+  outline: 2px solid var(--cofw-gold);
+  outline-offset: 2px;
+}
+
+/* ===== Ulazna animacija (uključuje je JS, pa blok radi i bez JS-a) ===== */
+.cofw--animate .cofw__reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.cofw--animate .cofw__reveal.cofw--in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ===== Responsivno ===== */
+@media (max-width: 768px) {
+  .cofw__content { padding: 56px 20px 72px; }
+  .cofw__mountains { height: 100px; }
+  .cofw__lines { width: 70%; opacity: 0.7; }
+}
+
+@media (max-width: 576px) {
+  .cofw__patrons-row { gap: 10px; }
+  .cofw__patron-divider { height: 54px; }
+  .cofw__patron-logo { height: 46px; }
+  .cofw__patron-logo--cof { height: 42px; }
+  .cofw__patron-logo--coa { height: 76px; }
+  .cofw__lead { font-size: 1rem; }
+  .cofw__btn--primary { font-size: 1.05rem; padding: 17px 30px; }
+  .cofw__actions .cofw__btn { flex: 1 1 100%; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cofw *,
+  .cofw *::before,
+  .cofw *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+</style>
+
+<section class="cofw" id="cofw-hero" aria-labelledby="cofw-title">
+
+  <div class="cofw__bg" aria-hidden="true">
+    <img src="https://centerforfinance.me/landing-page/assets/images/backgrounds/hero-kotor.jpg" alt="" loading="eager" decoding="async">
+  </div>
+
+  <div class="cofw__lines" aria-hidden="true">
+    <svg viewBox="0 0 600 800" preserveAspectRatio="none" focusable="false">
+      <path d="M420,-20 C520,120 380,260 480,400 C560,510 460,650 540,820"></path>
+      <path d="M480,-20 C580,140 440,280 540,420 C620,530 520,670 600,820"></path>
+      <path d="M360,-20 C460,100 320,240 420,380 C500,490 400,630 480,820"></path>
+    </svg>
+  </div>
+
+  <div class="cofw__mountains" aria-hidden="true">
+    <svg viewBox="0 0 1200 200" preserveAspectRatio="none" focusable="false">
+      <polygon class="cofw-mtn--back" points="0,200 0,120 180,40 340,110 520,30 700,120 880,55 1040,130 1200,70 1200,200"></polygon>
+      <polygon class="cofw-mtn--front" points="0,200 0,160 150,90 300,150 480,80 660,150 860,95 1040,160 1200,110 1200,200"></polygon>
+    </svg>
+  </div>
+
+  <div class="cofw__content">
+    <div class="cofw__inner">
+
+      <div class="cofw__patrons cofw__reveal" aria-label="Pod pokroviteljstvom Predsjednika Crne Gore, u partnerstvu sa Privrednom komorom Crne Gore i Centrom za finansije">
+        <span class="cofw__patrons-label">Pod pokroviteljstvom</span>
+        <div class="cofw__patrons-row">
+          <span class="cofw__patron" title="Centar za finansije">
+            <img class="cofw__patron-logo cofw__patron-logo--cof" src="https://centerforfinance.me/landing-page/assets/images/logos/cof-logo-black.png" alt="Centar za finansije">
+          </span>
+          <span class="cofw__patron-divider" aria-hidden="true"></span>
+          <span class="cofw__patron" title="Pod pokroviteljstvom Predsjednika Crne Gore">
+            <img class="cofw__patron-logo cofw__patron-logo--coa" src="https://centerforfinance.me/landing-page/assets/images/partners/president-of-montenegro.png" alt="Pod pokroviteljstvom Predsjednika Crne Gore">
+          </span>
+          <span class="cofw__patron-divider" aria-hidden="true"></span>
+          <span class="cofw__patron" title="Privredna komora Crne Gore">
+            <img class="cofw__patron-logo" src="https://centerforfinance.me/landing-page/assets/images/partners/chamber-of-commerce.png" alt="Privredna komora Crne Gore">
+          </span>
+        </div>
+      </div>
+
+      <span class="cofw__eyebrow cofw__reveal">Međunarodna konferencija</span>
+      <h1 class="cofw__title cofw__reveal notranslate wg-notranslate" id="cofw-title"
+          lang="en" translate="no" data-no-translation>Montenegro in the EU</h1>
+      <p class="cofw__tagline cofw__reveal notranslate wg-notranslate"
+         lang="en" translate="no" data-no-translation>Lessons, challenges and policy directions</p>
+
+      <p class="cofw__lead cofw__reveal">Nobelovac i lideri devet evropskih integracionih procesa dolaze u Podgoricu.</p>
+
+      <div class="cofw__meta cofw__reveal">
+        <div class="cofw__meta-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+            <path d="M3 10h18M8 3v4M16 3v4"></path>
+          </svg>
+          <span>16. oktobar 2026.</span>
+        </div>
+        <div class="cofw__meta-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"></path>
+            <circle cx="12" cy="10" r="2.6"></circle>
+          </svg>
+          <span>Hilton Podgorica, Crna Gora</span>
+        </div>
+      </div>
+
+      <div class="cofw__actions cofw__reveal">
+        <a class="cofw__btn cofw__btn--primary" href="https://forms.gle/pdVzHu64bUWMhnVf6" target="_blank" rel="noopener noreferrer">Registrujte se ovdje</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var root = document.getElementById('cofw-hero');
+  if (!root || root.dataset.cofwReady) return;
+  root.dataset.cofwReady = '1';
+
+  // Bez animacije ako korisnik traži smanjeno kretanje ili ako IntersectionObserver ne postoji.
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) return;
+
+  var items = root.querySelectorAll('.cofw__reveal');
+  if (!items.length) return;
+
+  // Klasa se dodaje tek sada: bez JS-a sadržaj je odmah vidljiv.
+  root.classList.add('cofw--animate');
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var i = Array.prototype.indexOf.call(items, el);
+      el.style.transitionDelay = Math.min(i, 6) * 90 + 'ms';
+      el.classList.add('cofw--in');
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.15 });
+
+  items.forEach(function (el) { observer.observe(el); });
+})();
+</script>

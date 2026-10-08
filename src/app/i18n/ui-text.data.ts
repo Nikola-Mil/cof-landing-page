@@ -22,7 +22,6 @@ export interface UiText {
     patronsAria: string;
     patronageLabel: string;
     patronMontenegro: string;
-    patronCaption: string;
     patronChamber: string;
   };
   nav: {
@@ -69,8 +68,6 @@ export interface UiText {
     lead: string;
     getDirections: string;
     mapTitle: string;
-    dinnerTitle: string;
-    dinnerText: string;
   };
   register: {
     eyebrow: string;
@@ -99,7 +96,6 @@ export const UI_TEXT: Record<Language, UiText> = {
       patronsAria: 'Held under the patronage of the President of Montenegro, in partnership with the Chamber of Commerce of Montenegro and Center for Finance',
       patronageLabel: 'Under the patronage of',
       patronMontenegro: 'Under the patronage of the President of Montenegro',
-      patronCaption: 'President of Montenegro',
       patronChamber: 'Chamber of Commerce of Montenegro',
     },
     nav: {
@@ -111,7 +107,7 @@ export const UI_TEXT: Record<Language, UiText> = {
       register: 'Register',
     },
     hero: {
-      lead: 'Nine countries. A Nobel laureate. Two days of conversation about what EU accession actually means.',
+      lead: 'Nine countries. A Nobel laureate. A day of conversation about what EU accession actually means.',
       registerNow: 'Register Now',
       viewAgenda: 'View Agenda',
       hostedBy: 'Hosted by',
@@ -122,49 +118,49 @@ export const UI_TEXT: Record<Language, UiText> = {
       lead: 'A high-level, expert international policy forum on lessons from the new EU member states\' experience with accession and post-accession development — for Montenegro\'s final stage of EU accession and its long-term economic and institutional transformation. Policy lessons will also be relevant for other candidate states.',
       contextText: 'The conference takes place at a particularly important moment, as Montenegro marks 20 years of its renewed independence while advancing towards the concluding phase of its European integration and the anticipated EU accession in 2028.',
       stats: [
-        { value: '2', label: 'Days of dialogue' },
-        { value: '19', label: 'International speakers' },
+        { value: '1', label: 'Day of dialogue' },
+        { value: '27', label: 'Speakers' },
         { value: '9', label: 'EU member state experiences' },
         { value: '1', label: 'Nobel laureate' },
       ],
       formats: [
         {
           icon: 'record_voice_over',
-          title: 'Keynote Interviews',
-          description: 'Moderated conversations with senior policymakers in place of traditional speeches.',
-        },
-        {
-          icon: 'chat',
-          title: 'Fireside Conversations',
-          description: 'Candid, informal exchanges on the reforms behind EU accession success stories.',
+          title: 'Keynote Addresses',
+          description: 'The President of Montenegro and leading European policymakers on enlargement, institutions and convergence.',
         },
         {
           icon: 'groups',
-          title: 'Strategic Panels',
-          description: 'Country-case discussions with leading economists, policymakers and practitioners.',
+          title: 'Lessons from New Member States',
+          description: 'Three country groups from nine new EU member states on what worked, what did not, and why.',
         },
         {
-          icon: 'bolt',
-          title: 'Rapid-Fire Reform Stories',
-          description: 'TED-style presentations on one transformative reform per country, 10–12 minutes each.',
+          icon: 'business_center',
+          title: 'CEO Perspectives',
+          description: 'Leaders of major EU companies in Montenegro on investment, business climate and accession.',
         },
         {
-          icon: 'forum',
-          title: 'Policy Debate & Audience Interaction',
-          description: 'Open, forward-looking discussion connecting lessons learned to Montenegro\'s path ahead.',
+          icon: 'trending_up',
+          title: 'Productivity & Growth',
+          description: 'Evidence on productivity, FDI and innovation — and how Montenegro can avoid the middle-income trap.',
+        },
+        {
+          icon: 'school',
+          title: 'Nobel Laureate Session',
+          description: 'James Robinson on institutions and development, and their lessons for Montenegro\'s accession.',
         },
       ],
     },
     agenda: {
       eyebrow: 'Programme',
-      title: 'Two Days in Podgorica',
-      lead: 'A draft agenda combining keynote interviews, country panels, rapid-fire reform stories and open policy debate.',
-      disclaimer: 'Draft agenda as of 11 June 2026 — programme and speakers subject to change.',
+      title: 'A Day in Podgorica',
+      lead: 'A draft agenda combining keynote addresses, country panels, a CEO panel and open policy debate.',
+      disclaimer: 'Draft agenda as of October 2026 — programme and speakers subject to change.',
     },
     speakers: {
       eyebrow: 'Speakers',
       title: 'Voices from Nine EU Accession Stories',
-      lead: 'Economists, former ministers and policy leaders who helped shape — or closely studied — EU accession across Central, Eastern and South-Eastern Europe. Tap a card to read the full bio.',
+      lead: 'Economists, former ministers, business and policy leaders who helped shape — or closely studied — EU accession across Central, Eastern and South-Eastern Europe. Tap a card to read the full bio.',
     },
     committee: {
       eyebrow: 'Organizing Committee',
@@ -177,13 +173,11 @@ export const UI_TEXT: Record<Language, UiText> = {
       lead: 'The conference takes place in Podgorica, the capital of Montenegro.',
       getDirections: 'Get Directions',
       mapTitle: 'Map showing Hilton Podgorica',
-      dinnerTitle: 'Welcome Dinner — Villa Gorica',
-      dinnerText: 'Hosted by the President of Montenegro on the evening of 15 October, featuring keynote remarks ahead of the working day.',
     },
     register: {
       eyebrow: 'Registration',
       title: 'Reserve Your Seat in Podgorica',
-      leadPrefix: 'Registration is required to attend. Join economists, policymakers and reformers for two days of conversation on Montenegro\'s European future —',
+      leadPrefix: 'Registration is required to attend. Join economists, policymakers and reformers for a day of conversation on Montenegro\'s European future —',
       registerNow: 'Register Now',
     },
     footer: {
@@ -205,7 +199,6 @@ export const UI_TEXT: Record<Language, UiText> = {
       patronsAria: 'Pod pokroviteljstvom Predsjednika Crne Gore, u partnerstvu sa Privrednom komorom Crne Gore i Centrom za finansije',
       patronageLabel: 'Pod pokroviteljstvom',
       patronMontenegro: 'Pod pokroviteljstvom Predsjednika Crne Gore',
-      patronCaption: 'Predsjednik Crne Gore',
       patronChamber: 'Privredna komora Crne Gore',
     },
     nav: {
@@ -217,7 +210,7 @@ export const UI_TEXT: Record<Language, UiText> = {
       register: 'Registracija',
     },
     hero: {
-      lead: 'Devet zemalja. Jedan nobelovac. Dva dana razgovora o tome šta pristupanje EU zaista znači.',
+      lead: 'Devet zemalja. Jedan nobelovac. Dan razgovora o tome šta pristupanje EU zaista znači.',
       registerNow: 'Registrujte se sada',
       viewAgenda: 'Pogledajte program',
       hostedBy: 'Domaćini',
@@ -228,49 +221,49 @@ export const UI_TEXT: Record<Language, UiText> = {
       lead: 'Ekspertski međunarodni forum visokog nivoa o poukama iz iskustva novih država članica EU sa pristupanjem i razvojem nakon pristupanja — namijenjen završnoj fazi pristupanja Crne Gore Evropskoj uniji i njenoj dugoročnoj ekonomskoj i institucionalnoj transformaciji. Pouke iz ovih politika biće relevantne i za druge države kandidate.',
       contextText: 'Konferencija se održava u posebno važnom trenutku, kada Crna Gora obilježava 20 godina obnovljene nezavisnosti, istovremeno napredujući ka završnoj fazi evropskih integracija i očekivanom pristupanju EU 2028. godine.',
       stats: [
-        { value: '2', label: 'Dana dijaloga' },
-        { value: '19', label: 'Međunarodnih govornika' },
+        { value: '1', label: 'Dan dijaloga' },
+        { value: '27', label: 'Govornika' },
         { value: '9', label: 'Iskustava država članica EU' },
         { value: '1', label: 'Nobelovac' },
       ],
       formats: [
         {
           icon: 'record_voice_over',
-          title: 'Uvodni intervjui',
-          description: 'Moderirani razgovori sa visokim kreatorima politika umjesto tradicionalnih govora.',
-        },
-        {
-          icon: 'chat',
-          title: 'Razgovori uz kamin',
-          description: 'Iskreni, neformalni razgovori o reformama koje stoje iza uspješnih priča o pristupanju EU.',
+          title: 'Uvodna izlaganja',
+          description: 'Predsjednik Crne Gore i vodeći evropski kreatori politika o proširenju, institucijama i konvergenciji.',
         },
         {
           icon: 'groups',
-          title: 'Strateški paneli',
-          description: 'Diskusije o iskustvima pojedinačnih zemalja sa vodećim ekonomistima, kreatorima politika i praktičarima.',
+          title: 'Iskustva novih država članica',
+          description: 'Tri grupe zemalja iz devet novih država članica EU o tome šta je funkcionisalo, šta nije i zašto.',
         },
         {
-          icon: 'bolt',
-          title: 'Brze priče o reformama',
-          description: 'Prezentacije u TED stilu o po jednoj transformativnoj reformi za svaku zemlju, u trajanju od 10 do 12 minuta.',
+          icon: 'business_center',
+          title: 'Perspektive izvršnih direktora',
+          description: 'Čelnici vodećih EU kompanija u Crnoj Gori o investicijama, poslovnom okruženju i pristupanju.',
         },
         {
-          icon: 'forum',
-          title: 'Debata o politikama i interakcija sa publikom',
-          description: 'Otvorena diskusija okrenuta budućnosti koja povezuje naučene lekcije sa daljim putem Crne Gore.',
+          icon: 'trending_up',
+          title: 'Produktivnost i rast',
+          description: 'Dokazi o produktivnosti, stranim investicijama i inovacijama — i kako Crna Gora može izbjeći zamku srednjeg dohotka.',
+        },
+        {
+          icon: 'school',
+          title: 'Sesija sa nobelovcem',
+          description: 'James Robinson o institucijama i razvoju, i njihovim poukama za pristupanje Crne Gore.',
         },
       ],
     },
     agenda: {
       eyebrow: 'Program',
-      title: 'Dva dana u Podgorici',
-      lead: 'Nacrt agende koji kombinuje uvodne intervjue, panele po zemljama, brze priče o reformama i otvorenu debatu o politikama.',
-      disclaimer: 'Nacrt agende od 11. juna 2026. godine — program i govornici su podložni izmjenama.',
+      title: 'Dan u Podgorici',
+      lead: 'Nacrt agende koji kombinuje uvodna izlaganja, panele po zemljama, panel izvršnih direktora i otvorenu debatu o politikama.',
+      disclaimer: 'Nacrt agende iz oktobra 2026. godine — program i govornici su podložni izmjenama.',
     },
     speakers: {
       eyebrow: 'Govornici',
       title: 'Glasovi iz devet priča o pristupanju EU',
-      lead: 'Ekonomisti, bivši ministri i kreatori politika koji su oblikovali — ili detaljno proučavali — pristupanje EU širom centralne, istočne i jugoistočne Evrope. Kliknite na karticu da pročitate cijelu biografiju.',
+      lead: 'Ekonomisti, bivši ministri, privrednici i kreatori politika koji su oblikovali — ili detaljno proučavali — pristupanje EU širom centralne, istočne i jugoistočne Evrope. Kliknite na karticu da pročitate cijelu biografiju.',
     },
     committee: {
       eyebrow: 'Organizacioni odbor',
@@ -283,13 +276,11 @@ export const UI_TEXT: Record<Language, UiText> = {
       lead: 'Konferencija se održava u Podgorici, glavnom gradu Crne Gore.',
       getDirections: 'Uputstva za dolazak',
       mapTitle: 'Mapa sa prikazom hotela Hilton Podgorica',
-      dinnerTitle: 'Svečana večera — Vila Gorica',
-      dinnerText: 'Domaćin je predsjednik Crne Gore, uveče 15. oktobra, sa uvodnim obraćanjima uoči radnog dana konferencije.',
     },
     register: {
       eyebrow: 'Registracija',
       title: 'Rezervišite svoje mjesto u Podgorici',
-      leadPrefix: 'Registracija je obavezna za učešće. Pridružite se ekonomistima, kreatorima politika i reformatorima za dva dana razgovora o evropskoj budućnosti Crne Gore —',
+      leadPrefix: 'Registracija je obavezna za učešće. Pridružite se ekonomistima, kreatorima politika i reformatorima za dan razgovora o evropskoj budućnosti Crne Gore —',
       registerNow: 'Registrujte se sada',
     },
     footer: {

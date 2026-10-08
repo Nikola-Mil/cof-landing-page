@@ -1,126 +1,133 @@
 import { AgendaDay } from '../models/agenda.model';
 import { Language } from '../i18n/language';
 
-// Source: "Montenegro in the EU Conference -- Draft Agenda" (as of June 11, 2026),
-// supplied by Center for Finance. Timings and the opening keynote line-up updated
-// per the "konferencija (1).pdf" agenda revision.
+// Source: "Draft Agenda_10-26.docx" (October 2026 revision), supplied by
+// Center for Finance.
 export const AGENDA: Record<Language, AgendaDay[]> = {
   en: [
     {
       label: 'Day 1',
-      date: 'Thursday, 15 October 2026 — Arrival & Keynote Dinner',
-      sessions: [
-        {
-          time: '16:00 – 18:00',
-          title: 'Welcome & Registration',
-          description: ['Participants are welcomed at the Hilton hotel by the Center for Finance staff.'],
-          type: 'session',
-        },
-        {
-          time: '19:00 – 20:30',
-          title: 'Dinner hosted by the President of Montenegro',
-          location: 'Villa Gorica',
-          description: [
-            'Keynote address by the President of Montenegro, Jakov Milatović.',
-            'Keynote talk by Ivan Miklos, MESA10 and Center for Economic Strategy, former Deputy Prime Minister and Minister of Finance and Economy, Slovak Republic.',
-          ],
-          type: 'social',
-          speakerIds: ['ivan-miklos'],
-        },
-      ],
-    },
-    {
-      label: 'Day 2',
       date: 'Friday, 16 October 2026 — Working Day',
       note: 'Evening of 16 October and morning of 17 October: end of conference, departure from Podgorica.',
       sessions: [
         {
-          time: '08:30 – 09:10',
+          time: '08:30 – 09:00',
           title: 'Registration',
           type: 'session',
         },
         {
-          time: '09:10 – 09:30',
+          time: '09:00 – 09:20',
           title: 'Opening of the Conference: Welcome and Opening Remarks',
           description: [
-            'Short introductory remarks by Center for Finance, the Chamber of Commerce of Montenegro, the Government of Montenegro, and a European Union representative (5 minutes each).',
+            'Prof. dr Ivana Katnić, Director, Center for Finance (5 min)',
+            'Dr Nina Drakić, President, Chamber of Commerce of Montenegro (5 min)',
+            'Maida Gorčević, Minister of European Affairs, Government of Montenegro (10 min)',
           ],
           type: 'session',
+          speakerIds: ['ivana-katnic', 'nina-drakic', 'maida-gorcevic'],
         },
         {
-          time: '09:30 – 10:15',
-          title: 'Opening Keynote: The Next Europe — Enlargement, Institutions, and Convergence',
+          time: '09:20 – 10:00',
+          title: 'Keynote: The Next Europe — Enlargement, Institutions, and Convergence',
           description: [
-            'A moderated keynote conversation, rather than a traditional speech, setting the broader strategic context for enlargement, convergence, and Montenegro\'s European future.',
+            'Jakov Milatović, President of Montenegro (10 min)',
+            'Enrico Letta, former Prime Minister of Italy; President of the Jacques Delors Institute — video address (10 min)',
+            'Ivan Miklos, former Deputy Prime Minister and Minister of Finance, Slovak Republic; Co-Founder, MESA10 (10 min)',
+            'Marek Dabrowski, Bruegel; Co-Founder, CASE (10 min)',
           ],
           type: 'keynote',
-          speakerIds: ['enrico-letta', 'marek-dabrowski'],
+          speakerIds: ['jakov-milatovic', 'enrico-letta', 'ivan-miklos', 'marek-dabrowski'],
         },
         {
-          time: '10:15 – 12:00',
-          title: 'Panel I — What Actually Worked? What Did Not Work? Why? Lessons from the New EU Member States',
-          description: [
-            'Three successive country-group conversations on the results of accession, which reforms changed economic trajectories, and the single most important policy lesson for Montenegro and other candidate countries.',
-            'Group 1 — Hungary, Romania, Bulgaria',
-            'Group 2 — Poland, Latvia, Estonia',
-            'Group 3 — Croatia, Slovenia, Slovakia',
-          ],
-          type: 'panel',
-          speakerIds: [
-            'daniel-prinz', 'daniel-daianu', 'lubomir-mitov',
-            'marcin-piatkowski', 'maciej-drozd', 'inna-steinbuka', 'madis-muller',
-            'marko-primorac', 'mojmir-mrak', 'rastislav-vrbensky', 'jan-marusinec', 'ivan-miklos',
-          ],
-        },
-        {
-          time: '12:00 – 12:20',
+          time: '10:00 – 10:15',
           title: 'Coffee Break',
           type: 'break',
         },
         {
-          time: '12:20 – 13:30',
-          title: 'Rapid Fire: Select Reform Stories — Three Countries, Three Key Reforms and Outcomes',
-          description: [
-            'A TED-style session of short, practical country presentations (10–12 minutes each) on one transformative reform per country.',
-            'Estonia, Madis Müller — Digital State',
-            'Latvia, Inna Šteinbuka — Policy Choices and Reform Outcomes',
-            'Slovakia, Rastislav Vrbensky, Jan Marusinec, Ivan Miklos — Fiscal Reform and Auto-Industrial Expansion',
+          time: '10:15 – 11:45',
+          title: 'Panel I — What Actually Worked? What Did Not Work? Why? Lessons from the New EU Member States',
+          groups: [
+            {
+              title: 'Group 1 (30 min)',
+              moderator: 'Moderated by Davor Kunc, Head of EIB Representation to Montenegro',
+              members: [
+                'Slovenia — Mojmir Mrak, Professor and Jean Monnet Chair, University of Ljubljana',
+                'Croatia — Roko Tolić, former Deputy Mayor of Dubrovnik and former Director of Dubrovnik Airport',
+                'Slovakia — Jan Marusinec, MESA10, former Advisor at the Slovak Ministry of Finance',
+              ],
+            },
+            {
+              title: 'Group 2 (30 min)',
+              moderator: 'Moderated by Tamaš Kamaraši (Hungary), CEO, CKB Bank',
+              members: [
+                'Romania — Laurian Lungu, Consilium Policy Advisors Group (CPAG)',
+                'Bulgaria — Lubomir Mitov, Independent Financial Consultant; former Chief CEE Economist, UniCredit, World Bank',
+              ],
+            },
+            {
+              title: 'Group 3 (30 min)',
+              moderator: 'Moderated by Inna Šteinbuka (Latvia), Professor, University of Latvia; Chair, Fiscal Discipline Council of Latvia',
+              members: [
+                'Poland — Marcin Piątkowski, Professor of Economics, Kozminski University; Lead Economist for South Asia, World Bank; former Advisor to Poland\'s Deputy Premier and Minister of Finance',
+                'Estonia — Madis Müller, former Governor, Bank of Estonia (Eesti Pank)',
+              ],
+            },
           ],
-          type: 'session',
-          speakerIds: ['madis-muller', 'inna-steinbuka', 'rastislav-vrbensky', 'jan-marusinec', 'ivan-miklos'],
+          type: 'panel',
+          speakerIds: [
+            'davor-kunc', 'mojmir-mrak', 'roko-tolic', 'jan-marusinec',
+            'tamas-kamarasi', 'laurian-lungu', 'lubomir-mitov',
+            'inna-steinbuka', 'marcin-piatkowski', 'madis-muller',
+          ],
         },
         {
-          time: '13:30 – 14:30',
-          title: 'Networking Lunch',
+          time: '12:00 – 13:00',
+          title: 'Panel II — Perspectives from CEOs of Leading EU Companies in Montenegro',
           description: [
-            'Thematic tables on macroeconomic management, regional connectivity, finance and investment climate, tourism, environment & sustainability, rule of law and judiciary reform, energy transition, and AI & digitalization.',
+            'Vasilis Panagopoulos, CEO, Jugopetrol',
+            'Branko Mitrović, CEO, One; President of the Board of Directors, Montenegrin Foreign Investors Council (MFIC)',
+            'Aleksa Lukić, CEO, Erste Bank',
+            'Martin Leberle, CEO, NLB Bank',
+            'Moderated by Ana Drašković, Vice President and Regional General Manager for Southern and Eastern Europe, Visa',
           ],
+          type: 'panel',
+          speakerIds: ['vasilis-panagopoulos', 'branko-mitrovic', 'aleksa-lukic', 'martin-leberle', 'ana-draskovic'],
+        },
+        {
+          time: '13:00 – 14:30',
+          title: 'Networking Lunch',
           type: 'break',
         },
         {
-          time: '14:30 – 15:45',
-          title: 'Panel II — Igniting Productivity Growth and Economic Transformation',
+          time: '14:30 – 15:15',
+          title: 'Panel III — Igniting Productivity Growth and Economic Transformation',
           description: [
-            'Can Montenegro avoid the middle-income trap and achieve high-income status? A moderated discussion on productivity, FDI, innovation and EU convergence in the Western Balkans, with short presentations on the evidence and its implications for Montenegro.',
+            'Can Montenegro avoid the middle-income trap and achieve high-income status? A moderated discussion on productivity, FDI, innovation and EU convergence.',
+            'Johannes W. Fedderke, Professor, Pennsylvania State University — Productivity and growth: what is the international evidence?',
+            'Zsoka Koczan, Lead Economist, EBRD — Evidence on recent FDI',
             'Moderated by Željko Bogetić, Academic Director of the Conference.',
           ],
           type: 'panel',
-          speakerIds: ['johannes-fedderke', 'alexander-plekhanov', 'zsoka-koczan', 'pavle-petrovic', 'zeljko-bogetic'],
+          speakerIds: ['johannes-fedderke', 'zsoka-koczan', 'zeljko-bogetic'],
         },
         {
-          time: '15:45 – 16:30',
-          title: 'Institutions and Development: Lessons for EU and Montenegro\'s Accession',
-          description: ['Presentation by James Robinson, University of Chicago, 2024 Nobel Laureate in Economics (by videoconference).'],
+          time: '15:30 – 16:00',
+          title: 'Panel IV — Institutions and Development: Lessons for EU and Montenegro\'s Accession',
+          description: [
+            'James Robinson, University of Chicago, 2024 Nobel Laureate in Economics (by videoconference).',
+            'Moderated by Željko Bogetić, Academic Director of the Conference.',
+          ],
           type: 'keynote',
-          speakerIds: ['james-robinson'],
+          speakerIds: ['james-robinson', 'zeljko-bogetic'],
         },
         {
-          time: '16:30 – 17:00',
+          time: '16:00 – 16:15',
           title: 'Closing Remarks — Issues and Policy Directions',
           description: [
-            'Instead of formal closing remarks: brief, high-level reflections on three key lessons and a vision of Montenegro\'s transformation beyond accession — its long-term economic vision, governance and institutions, and Europe after accession.',
+            'Dr Igor Lukšić, former Prime Minister and Minister of Finance of Montenegro, Center for Finance',
           ],
           type: 'session',
+          speakerIds: ['igor-luksic'],
         },
       ],
     },
@@ -128,119 +135,127 @@ export const AGENDA: Record<Language, AgendaDay[]> = {
   me: [
     {
       label: 'Dan 1',
-      date: 'Četvrtak, 15. oktobar 2026. — Dolazak i svečana večera',
-      sessions: [
-        {
-          time: '16:00 – 18:00',
-          title: 'Dobrodošlica i registracija',
-          description: ['Učesnike u hotelu Hilton dočekuje osoblje Centra za finansije.'],
-          type: 'session',
-        },
-        {
-          time: '19:00 – 20:30',
-          title: 'Večera u organizaciji predsjednika Crne Gore',
-          location: 'Vila Gorica',
-          description: [
-            'Uvodno obraćanje predsjednika Crne Gore, Jakova Milatovića.',
-            'Uvodno izlaganje Ivana Miklosa, MESA10 i Centar za ekonomsku strategiju, bivšeg potpredsjednika Vlade i ministra finansija i privrede Slovačke Republike.',
-          ],
-          type: 'social',
-          speakerIds: ['ivan-miklos'],
-        },
-      ],
-    },
-    {
-      label: 'Dan 2',
       date: 'Petak, 16. oktobar 2026. — Radni dan',
       note: 'Veče 16. oktobra i jutro 17. oktobra: kraj konferencije, odlazak iz Podgorice.',
       sessions: [
         {
-          time: '08:30 – 09:10',
+          time: '08:30 – 09:00',
           title: 'Registracija',
           type: 'session',
         },
         {
-          time: '09:10 – 09:30',
+          time: '09:00 – 09:20',
           title: 'Otvaranje konferencije: pozdravna i uvodna riječ',
           description: [
-            'Kratka uvodna obraćanja predstavnika Centra za finansije, Privredne komore Crne Gore, Vlade Crne Gore i predstavnika Evropske unije (po 5 minuta).',
+            'Prof. dr Ivana Katnić, direktorica, Centar za finansije (5 min)',
+            'Dr Nina Drakić, predsjednica, Privredna komora Crne Gore (5 min)',
+            'Maida Gorčević, ministarka evropskih poslova, Vlada Crne Gore (10 min)',
           ],
           type: 'session',
+          speakerIds: ['ivana-katnic', 'nina-drakic', 'maida-gorcevic'],
         },
         {
-          time: '09:30 – 10:15',
+          time: '09:20 – 10:00',
           title: 'Uvodno izlaganje: Naredna Evropa — proširenje, institucije i konvergencija',
           description: [
-            'Moderirani uvodni razgovor, umjesto tradicionalnog govora, koji postavlja širi strateški okvir za proširenje, konvergenciju i evropsku budućnost Crne Gore.',
+            'Jakov Milatović, predsjednik Crne Gore (10 min)',
+            'Enrico Letta, bivši premijer Italije; predsjednik Instituta Jacques Delors — video obraćanje (10 min)',
+            'Ivan Miklos, bivši potpredsjednik Vlade i ministar finansija Slovačke Republike; suosnivač MESA10 (10 min)',
+            'Marek Dabrowski, Bruegel; suosnivač CASE (10 min)',
           ],
           type: 'keynote',
-          speakerIds: ['enrico-letta', 'marek-dabrowski'],
+          speakerIds: ['jakov-milatovic', 'enrico-letta', 'ivan-miklos', 'marek-dabrowski'],
         },
         {
-          time: '10:15 – 12:00',
-          title: 'Panel I — Šta je zaista funkcionisalo? Šta nije funkcionisalo? Zašto? Iskustva novih država članica EU',
-          description: [
-            'Tri uzastopna razgovora sa grupama zemalja o rezultatima pristupanja, reformama koje su promijenile ekonomske tokove i jednoj najvažnijoj pouci za Crnu Goru i druge zemlje kandidate.',
-            'Grupa 1 — Mađarska, Rumunija, Bugarska',
-            'Grupa 2 — Poljska, Letonija, Estonija',
-            'Grupa 3 — Hrvatska, Slovenija, Slovačka',
-          ],
-          type: 'panel',
-          speakerIds: [
-            'daniel-prinz', 'daniel-daianu', 'lubomir-mitov',
-            'marcin-piatkowski', 'maciej-drozd', 'inna-steinbuka', 'madis-muller',
-            'marko-primorac', 'mojmir-mrak', 'rastislav-vrbensky', 'jan-marusinec', 'ivan-miklos',
-          ],
-        },
-        {
-          time: '12:00 – 12:20',
+          time: '10:00 – 10:15',
           title: 'Pauza za kafu',
           type: 'break',
         },
         {
-          time: '12:20 – 13:30',
-          title: 'Brze priče: odabrane reforme — tri zemlje, tri ključne reforme i njihovi rezultati',
-          description: [
-            'Sesija u TED stilu sa kratkim, praktičnim prezentacijama zemalja (po 10 do 12 minuta) o po jednoj transformativnoj reformi za svaku zemlju.',
-            'Estonija, Madis Müller — Digitalna država',
-            'Letonija, Inna Šteinbuka — Izbori politika i rezultati reformi',
-            'Slovačka, Rastislav Vrbensky, Jan Marusinec, Ivan Miklos — Fiskalna reforma i širenje auto-industrije',
+          time: '10:15 – 11:45',
+          title: 'Panel I — Šta je zaista funkcionisalo? Šta nije funkcionisalo? Zašto? Iskustva novih država članica EU',
+          groups: [
+            {
+              title: 'Grupa 1 (30 min)',
+              moderator: 'Moderira Davor Kunc, šef predstavništva EIB-a u Crnoj Gori',
+              members: [
+                'Slovenija — Mojmir Mrak, profesor i nosilac Jean Monnet katedre, Univerzitet u Ljubljani',
+                'Hrvatska — Roko Tolić, bivši zamjenik gradonačelnika Dubrovnika i bivši direktor Zračne luke Dubrovnik',
+                'Slovačka — Jan Marusinec, MESA10, bivši savjetnik u Ministarstvu finansija Slovačke',
+              ],
+            },
+            {
+              title: 'Grupa 2 (30 min)',
+              moderator: 'Moderira Tamaš Kamaraši (Mađarska), izvršni direktor, CKB banka',
+              members: [
+                'Rumunija — Laurian Lungu, Consilium Policy Advisors Group (CPAG)',
+                'Bugarska — Lubomir Mitov, nezavisni finansijski konsultant; bivši glavni ekonomista za CIE, UniCredit, Svjetska banka',
+              ],
+            },
+            {
+              title: 'Grupa 3 (30 min)',
+              moderator: 'Moderira Inna Šteinbuka (Letonija), profesorka, Univerzitet Letonije; predsjednica Savjeta za fiskalnu disciplinu Letonije',
+              members: [
+                'Poljska — Marcin Piątkowski, profesor ekonomije, Univerzitet Kozminski; vodeći ekonomista za Južnu Aziju, Svjetska banka; bivši savjetnik potpredsjednika Vlade i ministra finansija Poljske',
+                'Estonija — Madis Müller, bivši guverner Banke Estonije (Eesti Pank)',
+              ],
+            },
           ],
-          type: 'session',
-          speakerIds: ['madis-muller', 'inna-steinbuka', 'rastislav-vrbensky', 'jan-marusinec', 'ivan-miklos'],
+          type: 'panel',
+          speakerIds: [
+            'davor-kunc', 'mojmir-mrak', 'roko-tolic', 'jan-marusinec',
+            'tamas-kamarasi', 'laurian-lungu', 'lubomir-mitov',
+            'inna-steinbuka', 'marcin-piatkowski', 'madis-muller',
+          ],
         },
         {
-          time: '13:30 – 14:30',
-          title: 'Ručak uz umrežavanje',
+          time: '12:00 – 13:00',
+          title: 'Panel II — Perspektive izvršnih direktora vodećih EU kompanija u Crnoj Gori',
           description: [
-            'Tematski stolovi o makroekonomskom upravljanju, regionalnoj povezanosti, finansijama i investicionoj klimi, turizmu, životnoj sredini i održivosti, vladavini prava i reformi pravosuđa, energetskoj tranziciji i vještačkoj inteligenciji i digitalizaciji.',
+            'Vasilis Panagopoulos, izvršni direktor, Jugopetrol',
+            'Branko Mitrović, izvršni direktor, One; predsjednik Upravnog odbora Savjeta stranih investitora u Crnoj Gori (MFIC)',
+            'Aleksa Lukić, izvršni direktor, Erste banka',
+            'Martin Leberle, izvršni direktor, NLB banka',
+            'Moderira Ana Drašković, potpredsjednica i regionalna generalna direktorka za Južnu i Istočnu Evropu, Visa',
           ],
+          type: 'panel',
+          speakerIds: ['vasilis-panagopoulos', 'branko-mitrovic', 'aleksa-lukic', 'martin-leberle', 'ana-draskovic'],
+        },
+        {
+          time: '13:00 – 14:30',
+          title: 'Ručak uz umrežavanje',
           type: 'break',
         },
         {
-          time: '14:30 – 15:45',
-          title: 'Panel II — Podsticanje rasta produktivnosti i ekonomske transformacije',
+          time: '14:30 – 15:15',
+          title: 'Panel III — Podsticanje rasta produktivnosti i ekonomske transformacije',
           description: [
-            'Može li Crna Gora izbjeći zamku srednjeg dohotka i dostići status visokog dohotka? Moderirana diskusija o produktivnosti, stranim direktnim investicijama, inovacijama i konvergenciji sa EU na Zapadnom Balkanu, sa kratkim prezentacijama dokaza i njihovih implikacija za Crnu Goru.',
+            'Može li Crna Gora izbjeći zamku srednjeg dohotka i dostići status visokog dohotka? Moderirana diskusija o produktivnosti, stranim direktnim investicijama, inovacijama i konvergenciji sa EU.',
+            'Johannes W. Fedderke, profesor, Državni univerzitet Pensilvanije — Produktivnost i rast: šta pokazuju međunarodni dokazi?',
+            'Zsoka Koczan, vodeća ekonomistkinja, EBRD — Dokazi o nedavnim stranim direktnim investicijama',
             'Moderira Željko Bogetić, akademski direktor konferencije.',
           ],
           type: 'panel',
-          speakerIds: ['johannes-fedderke', 'alexander-plekhanov', 'zsoka-koczan', 'pavle-petrovic', 'zeljko-bogetic'],
+          speakerIds: ['johannes-fedderke', 'zsoka-koczan', 'zeljko-bogetic'],
         },
         {
-          time: '15:45 – 16:30',
-          title: 'Institucije i razvoj: pouke za pristupanje EU i Crne Gore',
-          description: ['Izlaganje Jamesa Robinsona, Univerzitet u Čikagu, dobitnika Nobelove nagrade za ekonomiju 2024. godine (putem videokonferencije).'],
+          time: '15:30 – 16:00',
+          title: 'Panel IV — Institucije i razvoj: pouke za pristupanje EU i Crne Gore',
+          description: [
+            'James Robinson, Univerzitet u Čikagu, dobitnik Nobelove nagrade za ekonomiju 2024. godine (putem videokonferencije).',
+            'Moderira Željko Bogetić, akademski direktor konferencije.',
+          ],
           type: 'keynote',
-          speakerIds: ['james-robinson'],
+          speakerIds: ['james-robinson', 'zeljko-bogetic'],
         },
         {
-          time: '16:30 – 17:00',
+          time: '16:00 – 16:15',
           title: 'Završna riječ — izazovi i pravci politika',
           description: [
-            'Umjesto formalne završne riječi: kratka razmatranja na visokom nivou o tri ključne pouke i viziji transformacije Crne Gore nakon pristupanja — njenoj dugoročnoj ekonomskoj viziji, upravljanju i institucijama, te Evropi nakon pristupanja.',
+            'Dr Igor Lukšić, bivši predsjednik Vlade i ministar finansija Crne Gore, Centar za finansije',
           ],
           type: 'session',
+          speakerIds: ['igor-luksic'],
         },
       ],
     },

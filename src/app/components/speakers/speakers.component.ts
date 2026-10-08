@@ -1,10 +1,12 @@
 import { Component, HostListener, computed, inject } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 import { I18nService } from '../../i18n/i18n.service';
 import { SpeakerSelectionService } from '../../services/speaker-selection.service';
 
 @Component({
   selector: 'app-speakers',
   standalone: true,
+  imports: [NgTemplateOutlet],
   templateUrl: './speakers.component.html',
   styleUrl: './speakers.component.scss',
 })
@@ -18,6 +20,10 @@ export class SpeakersComponent {
 
   open(id: string): void {
     this.speakerSelection.open(id);
+  }
+
+  initials(name: string): string {
+    return name.split(' ').slice(0, 2).map((w) => w[0]).join('');
   }
 
   close(): void {

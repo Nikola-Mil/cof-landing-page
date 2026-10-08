@@ -23,6 +23,10 @@ export class AgendaComponent {
     return findSpeaker(id, this.i18n.lang())?.name ?? id;
   }
 
+  hasBio(id: string): boolean {
+    return !!findSpeaker(id, this.i18n.lang())?.bio.length;
+  }
+
   openSpeaker(id: string): void {
     this.speakerSelection.open(id);
   }

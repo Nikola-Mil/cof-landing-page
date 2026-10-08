@@ -13,16 +13,32 @@
 
     <div class="speakers__grid">
       @for (speaker of i18n.speakers(); track speaker.id) {
-        <button type="button" class="speakers__card" (click)="open(speaker.id)">
-          <span class="speakers__photo-wrap">
-            <img [src]="speaker.photo" [alt]="speaker.name" loading="lazy" width="500" height="625" />
-          </span>
-          <span class="speakers__name">{{ speaker.name }}</span>
-          <span class="speakers__role">{{ speaker.title }}</span>
-        </button>
+        @if (speaker.bio.length) {
+          <button type="button" class="speakers__card" (click)="open(speaker.id)">
+            <ng-container *ngTemplateOutlet="cardContent; context: { $implicit: speaker }" />
+          </button>
+        } @else {
+          <div class="speakers__card speakers__card--static">
+            <ng-container *ngTemplateOutlet="cardContent; context: { $implicit: speaker }" />
+          </div>
+        }
       }
     </div>
   </div>
+
+  <ng-template #cardContent let-speaker>
+    <span class="speakers__photo-wrap">
+      @if (speaker.photo) {
+        <img [src]="speaker.photo" [alt]="speaker.name" loading="lazy" width="500" height="625" />
+      } @else {
+        <span class="speakers__initials" aria-hidden="true">{{ initials(speaker.name) }}</span>
+      }
+    </span>
+    <span class="speakers__name">{{ speaker.name }}</span>
+    @if (speaker.title) {
+      <span class="speakers__role">{{ speaker.title }}</span>
+    }
+  </ng-template>
 
   @if (selected(); as speaker) {
     <div class="speakers__backdrop" (click)="close()">
@@ -37,10 +53,14 @@
           <span class="material-icons-outlined">close</span>
         </button>
         <div class="speakers__modal-header">
-          <img [src]="speaker.photo" [alt]="speaker.name" width="500" height="625" />
+          @if (speaker.photo) {
+            <img [src]="speaker.photo" [alt]="speaker.name" width="500" height="625" />
+          }
           <div>
             <h3>{{ speaker.name }}</h3>
-            <p class="speakers__modal-title">{{ speaker.title }}</p>
+            @if (speaker.title) {
+              <p class="speakers__modal-title">{{ speaker.title }}</p>
+            }
           </div>
         </div>
         <div class="speakers__modal-body">

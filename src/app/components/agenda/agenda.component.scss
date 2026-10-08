@@ -90,6 +90,41 @@
     }
   }
 
+  &__day-title {
+    text-align: center;
+    margin-bottom: 40px;
+
+    &-label {
+      display: block;
+      font-family: $font-display;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: $black;
+      position: relative;
+      padding-bottom: 14px;
+      margin-bottom: 8px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 48px;
+        height: 3px;
+        background: $gold;
+        border-radius: 2px;
+      }
+    }
+
+    &-date {
+      display: block;
+      font-size: 0.88rem;
+      color: $gray-500;
+      font-weight: 500;
+    }
+  }
+
   &__timeline {
     position: relative;
     max-width: 900px;
@@ -220,7 +255,7 @@
       font-size: 0.92rem;
       color: $gray-600;
       line-height: 1.6;
-      padding-left: 14px;
+      padding-left: 26px;
       position: relative;
 
       &::before {
@@ -229,6 +264,33 @@
         left: 0;
         color: $gold;
       }
+    }
+  }
+
+  &__groups {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__group {
+    padding: 14px 16px;
+    background: rgba($gold, 0.06);
+    border-left: 3px solid $gold;
+    border-radius: $radius-sm;
+
+    &-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: $black;
+      margin: 0 0 4px;
+    }
+
+    &-moderator {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: $gray-600;
+      margin: 0 0 8px;
     }
   }
 
@@ -250,10 +312,14 @@
     cursor: pointer;
     transition: all $transition-fast;
 
-    &:hover {
+    &:hover:not(&--static) {
       background: $gold;
       color: $white;
       border-color: $gold;
+    }
+
+    &--static {
+      cursor: default;
     }
   }
 

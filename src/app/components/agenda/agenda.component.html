@@ -11,22 +11,29 @@
       </p>
     </div>
 
-    <div class="agenda__tabs" role="tablist">
-      @for (day of i18n.agendaDays(); track day.label; let i = $index) {
-        <button
-          type="button"
-          role="tab"
-          class="agenda__tab"
-          [class.active]="activeDay() === i"
-          [attr.aria-selected]="activeDay() === i"
-          (click)="setDay(i)"
-        >
-          <span class="material-icons-outlined agenda__tab-icon" aria-hidden="true">arrow_forward</span>
-          <span class="agenda__tab-label">{{ day.label }}</span>
-          <span class="agenda__tab-date">{{ day.date }}</span>
-        </button>
-      }
-    </div>
+    @if (i18n.agendaDays().length > 1) {
+      <div class="agenda__tabs" role="tablist">
+        @for (day of i18n.agendaDays(); track day.label; let i = $index) {
+          <button
+            type="button"
+            role="tab"
+            class="agenda__tab"
+            [class.active]="activeDay() === i"
+            [attr.aria-selected]="activeDay() === i"
+            (click)="setDay(i)"
+          >
+            <span class="material-icons-outlined agenda__tab-icon" aria-hidden="true">arrow_forward</span>
+            <span class="agenda__tab-label">{{ day.label }}</span>
+            <span class="agenda__tab-date">{{ day.date }}</span>
+          </button>
+        }
+      </div>
+    } @else if (i18n.agendaDays()[0]; as day) {
+      <div class="agenda__day-title">
+        <span class="agenda__day-title-label">{{ day.label }}</span>
+        <span class="agenda__day-title-date">{{ day.date }}</span>
+      </div>
+    }
 
     @for (day of i18n.agendaDays(); track day.label; let i = $index) {
       @if (activeDay() === i) {
@@ -52,12 +59,31 @@
                     }
                   </ul>
                 }
+                @if (session.groups) {
+                  <div class="agenda__groups">
+                    @for (group of session.groups; track group.title) {
+                      <div class="agenda__group">
+                        <h4 class="agenda__group-title">{{ group.title }}</h4>
+                        <p class="agenda__group-moderator">{{ group.moderator }}</p>
+                        <ul class="agenda__item-desc">
+                          @for (member of group.members; track member) {
+                            <li>{{ member }}</li>
+                          }
+                        </ul>
+                      </div>
+                    }
+                  </div>
+                }
                 @if (session.speakerIds) {
                   <div class="agenda__item-speakers">
                     @for (id of session.speakerIds; track id) {
-                      <button type="button" class="agenda__speaker-chip" (click)="openSpeaker(id)">
-                        {{ speakerName(id) }}
-                      </button>
+                      @if (hasBio(id)) {
+                        <button type="button" class="agenda__speaker-chip" (click)="openSpeaker(id)">
+                          {{ speakerName(id) }}
+                        </button>
+                      } @else {
+                        <span class="agenda__speaker-chip agenda__speaker-chip--static">{{ speakerName(id) }}</span>
+                      }
                     }
                   </div>
                 }

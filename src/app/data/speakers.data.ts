@@ -39,16 +39,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'enrico-letta',
-      name: 'Enrico Letta',
-      title: 'Former Prime Minister of Italy',
-      photo: 'assets/images/speakers/enrico-letta.jpg',
-      bio: [
-        'Enrico Letta served as Prime Minister of Italy from 2013 to 2014.',
-        'Full biography to follow.',
-      ],
-    },
-    {
       id: 'marek-dabrowski',
       name: 'Marek Dabrowski',
       title: 'Non-Resident Fellow, Bruegel; Co-Founder, CASE',
@@ -57,26 +47,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
         'Marek Dabrowski is a Non-Resident Fellow at Bruegel, specialising in monetary and fiscal policy, trade policy, and the political economy of policy reform.',
         'His work covers country-specific and cross-country analyses of monetary and fiscal policy, macroeconomic trends and financial stability, the European Union and euro-area economy, European integration, and economic reform in emerging-market economies — particularly in Central and Eastern Europe, the former Soviet Union, and the Middle East and North Africa. He speaks English, Polish and Russian.',
         'He is a co-founder and Fellow of the Centre for Social and Economic Research (CASE). He has previously been a Visiting Professor at the Central European University in Vienna and Professor at the Higher School of Economics in Moscow, and holds a Ph.D. in Economics from the Institute of Planning, Warsaw.',
-      ],
-    },
-    {
-      id: 'daniel-prinz',
-      name: 'Dániel Prinz',
-      title: 'Deputy State Secretary for Economic Policy and International Financial Relations, Hungary',
-      photo: 'assets/images/speakers/daniel-prinz.jpg',
-      bio: [
-        'Dániel Prinz, based in Hungary, currently serves as Deputy State Secretary for Economic Policy and International Financial Relations at the Ministry of Finance (Pénzügyminisztérium).',
-        'He brings experience from previous roles at The World Bank, the ELTE KRTK Institute of Economics, and the Institute for Fiscal Studies.',
-        'He holds a Ph.D. in Health Policy and Economics from Harvard University (2015–2021) and a B.A. in Economics and Mathematics from Brown University.',
-      ],
-    },
-    {
-      id: 'daniel-daianu',
-      name: 'Daniel Daianu',
-      title: 'Professor of Economics, SNSPA Bucharest; Former Finance Minister of Romania',
-      photo: 'assets/images/speakers/daniel-daianu.jpg',
-      bio: [
-        'Daniel Daianu is a professor of economics at the National School of Political and Administrative Studies (SNSPA) in Bucharest, and chairman of the Romanian Economic Society. He is a former finance minister of Romania and a former Member of the European Parliament. He was a visiting professor at UCLA and the University of California, Berkeley.',
       ],
     },
     {
@@ -102,16 +72,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'maciej-drozd',
-      name: 'Maciej Drozd',
-      title: 'Economist, Competition Policy Team, World Bank',
-      photo: 'assets/images/speakers/maciej-drozd.jpg',
-      bio: [
-        'Maciej Drozd is an economist with the competition policy team of the World Bank. Between 2010 and 2016 he championed regulatory impact assessments within the Polish government, most recently leading the RIA team at the Polish Prime Minister\'s Office.',
-        'He has also been a fellow at the Harvard Kennedy School, sharing lessons from regulatory reform in Poland and researching behaviourally informed alternatives to regulation. Prior to public service, he worked for the international management consultancy A.T. Kearney on the consolidation and integration of European energy companies. He holds degrees in economics and public policy from Columbia University, the National University of Singapore, and the Warsaw School of Economics.',
-      ],
-    },
-    {
       id: 'inna-steinbuka',
       name: 'Inna Šteinbuka',
       title: 'Professor, University of Latvia; Chair, Fiscal Discipline Council of Latvia',
@@ -132,16 +92,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'marko-primorac',
-      name: 'Marko Primorac',
-      title: 'Vice-President, European Investment Bank; Former Croatian Deputy Prime Minister and Minister of Finance',
-      photo: 'assets/images/speakers/marko-primorac.jpg',
-      bio: [
-        'Marko Primorac is Vice-President of the European Investment Bank (EIB), representing Croatia on the Bank\'s Management Committee — the first Croatian national to hold the position.',
-        'He previously served as Croatia\'s Deputy Prime Minister and Minister of Finance.',
-      ],
-    },
-    {
       id: 'mojmir-mrak',
       name: 'Mojmir Mrak',
       title: 'Professor and Jean Monnet Chair, University of Ljubljana',
@@ -150,16 +100,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
         'Mojmir Mrak is a full-time Professor and Jean Monnet Chair holder at the Academic Unit for Money and Finance, Faculty of Economics, University of Ljubljana, and a regular visiting professor at the Wirtschaftsuniversität Wien and the Burgundy School of Business in Dijon. His research covers international capital flows, national and EU public finances, and EU accession.',
         'He has more than 25 years of experience designing and implementing Slovenia\'s government policy on international finance and EU accession. Between 1992 and 1996 he was Slovenia\'s Chief External Debt Negotiator, responsible for its early credit arrangements with the EBRD and the World Bank, and from 1997 to 2004 he was Chief Advisor to the Slovenian Government on the financial aspects of EU accession.',
         'He has since advised on Slovenia\'s negotiating positions across several EU multi-annual financial frameworks and undertaken numerous consultancy assignments on macro-fiscal and EU accession issues for governments across South Eastern Europe. He currently serves as Senior Programme Advisor to the Centre of Excellence in Finance.',
-      ],
-    },
-    {
-      id: 'rastislav-vrbensky',
-      name: 'Rastislav Vrbensky',
-      title: 'Development Executive and Advisor, UNDP Europe',
-      photo: 'assets/images/speakers/rastislav-vrbensky.jpg',
-      bio: [
-        'Rastislav Vrbensky is an experienced development executive, advisor and lecturer who has led large teams at leading international organisations, including the UN and UNDP.',
-        'His expertise spans sustainability, climate and innovation, combined with research and teaching experience at leading academic institutions.',
       ],
     },
     {
@@ -185,17 +125,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'alexander-plekhanov',
-      name: 'Alexander Plekhanov',
-      title: 'Director for Transition Impact and Global Economics, EBRD',
-      photo: 'assets/images/speakers/alexander-plekhanov.jpg',
-      bio: [
-        'Alexander Plekhanov is Director for Transition Impact and Global Economics at the EBRD Office of the Chief Economist.',
-        'He edits the EBRD\'s annual economic report, the Transition Report, and Regional Economic Prospects. He has worked on global macroeconomic issues as well as a country economist for a number of countries, including Belarus, Kazakhstan, Mongolia and Russia.',
-        'Prior to joining the Bank, Alexander worked as an economist at the International Monetary Fund.',
-      ],
-    },
-    {
       id: 'zsoka-koczan',
       name: 'Zsoka Koczan',
       title: 'Associate Director and Lead Economist, EBRD',
@@ -207,15 +136,79 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'pavle-petrovic',
-      name: 'Pavle Petrović',
-      title: 'Member, Serbian Academy of Sciences and Arts; Former President, Fiscal Council of Serbia',
-      photo: 'assets/images/speakers/pavle-petrovic.jpg',
-      bio: [
-        'Pavle Petrović is a member of the Serbian Academy of Sciences and Arts, Professor Emeritus at the University of Belgrade, and former President of the Fiscal Council of the Republic of Serbia (2011–2024).',
-        'His research focuses on empirical macroeconomics and macroeconomic policy — fiscal and monetary — published in journals including the Journal of Money, Credit and Banking, the Journal of Development Economics, and the Cambridge Journal of Economics. He has been a visiting fellow at Harvard, Princeton and Cornell, and taught economics at the University of Belgrade through 2015.',
-        'He served as chief editor of the Quarterly Monitor of Economic Trends and Policies in Serbia (2007–2011), President of the National Bank of Serbia Council (2003–2004), and Assistant Finance Minister of Serbia (2001–2002). His latest book is "Macroeconomic Crisis and Reforms in Serbia 1980–2023: An Econometric Analysis" (SASA, 2024).',
-      ],
+      id: 'ivana-katnic',
+      name: 'Ivana Katnić',
+      bio: [],
+    },
+    {
+      id: 'nina-drakic',
+      name: 'Nina Drakić',
+      bio: [],
+    },
+    {
+      id: 'maida-gorcevic',
+      name: 'Maida Gorčević',
+      bio: [],
+    },
+    {
+      id: 'jakov-milatovic',
+      name: 'Jakov Milatović',
+      bio: [],
+    },
+    {
+      id: 'enrico-letta',
+      name: 'Enrico Letta',
+      bio: [],
+    },
+    {
+      id: 'davor-kunc',
+      name: 'Davor Kunc',
+      bio: [],
+    },
+    {
+      id: 'roko-tolic',
+      name: 'Roko Tolić',
+      bio: [],
+    },
+    {
+      id: 'tamas-kamarasi',
+      name: 'Tamaš Kamaraši',
+      bio: [],
+    },
+    {
+      id: 'laurian-lungu',
+      name: 'Laurian Lungu',
+      bio: [],
+    },
+    {
+      id: 'vasilis-panagopoulos',
+      name: 'Vasilis Panagopoulos',
+      bio: [],
+    },
+    {
+      id: 'branko-mitrovic',
+      name: 'Branko Mitrović',
+      bio: [],
+    },
+    {
+      id: 'aleksa-lukic',
+      name: 'Aleksa Lukić',
+      bio: [],
+    },
+    {
+      id: 'martin-leberle',
+      name: 'Martin Leberle',
+      bio: [],
+    },
+    {
+      id: 'ana-draskovic',
+      name: 'Ana Drašković',
+      bio: [],
+    },
+    {
+      id: 'igor-luksic',
+      name: 'Igor Lukšić',
+      bio: [],
     },
   ],
   me: [
@@ -253,16 +246,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'enrico-letta',
-      name: 'Enrico Letta',
-      title: 'Bivši premijer Italije',
-      photo: 'assets/images/speakers/enrico-letta.jpg',
-      bio: [
-        'Enrico Letta je bio premijer Italije od 2013. do 2014. godine.',
-        'Puna biografija slijedi.',
-      ],
-    },
-    {
       id: 'marek-dabrowski',
       name: 'Marek Dabrowski',
       title: 'Nerezidentni stipendista, Bruegel; suosnivač CASE',
@@ -271,26 +254,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
         'Marek Dabrowski je nerezidentni stipendista instituta Bruegel, specijalizovan za monetarnu i fiskalnu politiku, trgovinsku politiku i političku ekonomiju reformi.',
         'Njegov rad obuhvata analize monetarne i fiskalne politike na nivou pojedinačnih zemalja i uporedne analize, makroekonomske trendove i finansijsku stabilnost, ekonomiju Evropske unije i evrozone, evropske integracije i ekonomske reforme u zemljama u razvoju — posebno u centralnoj i istočnoj Evropi, bivšem Sovjetskom Savezu, na Bliskom istoku i u sjevernoj Africi. Govori engleski, poljski i ruski jezik.',
         'Suosnivač je i stipendista Centra za društvena i ekonomska istraživanja (CASE). Ranije je bio gostujući profesor na Centralnoevropskom univerzitetu u Beču i profesor na Visokoj školi ekonomije u Moskvi, a doktorirao je ekonomiju na Institutu za planiranje u Varšavi.',
-      ],
-    },
-    {
-      id: 'daniel-prinz',
-      name: 'Dániel Prinz',
-      title: 'Zamjenik državnog sekretara za ekonomsku politiku i međunarodne finansijske odnose, Mađarska',
-      photo: 'assets/images/speakers/daniel-prinz.jpg',
-      bio: [
-        'Dániel Prinz, sa sjedištem u Mađarskoj, trenutno obavlja funkciju zamjenika državnog sekretara za ekonomsku politiku i međunarodne finansijske odnose u Ministarstvu finansija (Pénzügyminisztérium).',
-        'Prethodno je stekao iskustvo radeći u Svjetskoj banci, Institutu za ekonomiju ELTE KRTK i Institute for Fiscal Studies.',
-        'Doktorirao je zdravstvenu politiku i ekonomiju na Univerzitetu Harvard (2015–2021), a osnovne studije ekonomije i matematike završio je na Univerzitetu Braun (Brown).',
-      ],
-    },
-    {
-      id: 'daniel-daianu',
-      name: 'Daniel Daianu',
-      title: 'Profesor ekonomije, SNSPA Bukurešt; bivši ministar finansija Rumunije',
-      photo: 'assets/images/speakers/daniel-daianu.jpg',
-      bio: [
-        'Daniel Daianu je profesor ekonomije na Nacionalnoj školi političkih i administrativnih studija (SNSPA) u Bukureštu i predsjednik Rumunskog ekonomskog društva. Bivši je ministar finansija Rumunije i bivši poslanik Evropskog parlamenta. Bio je gostujući profesor na UCLA i Univerzitetu Kalifornije u Berkliju.',
       ],
     },
     {
@@ -316,16 +279,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'maciej-drozd',
-      name: 'Maciej Drozd',
-      title: 'Ekonomista, Tim za politiku konkurencije, Svjetska banka',
-      photo: 'assets/images/speakers/maciej-drozd.jpg',
-      bio: [
-        'Maciej Drozd je ekonomista u timu za politiku konkurencije Svjetske banke. Između 2010. i 2016. godine zalagao se za procjenu regulatornog uticaja u okviru poljske vlade, a poslednje je vodio RIA tim u Kabinetu premijera Poljske.',
-        'Bio je i stipendista na Harvard Kennedy School, gdje je prenosio iskustva regulatorne reforme u Poljskoj i istraživao alternative regulaciji zasnovane na bihejvioralnim uvidima. Prije rada u javnom sektoru, radio je u međunarodnoj konsultantskoj kući A.T. Kearney na konsolidaciji i integraciji evropskih energetskih kompanija. Diplomirao je ekonomiju i javne politike na Univerzitetu Kolumbija, Nacionalnom univerzitetu Singapura i Varšavskoj školi ekonomije.',
-      ],
-    },
-    {
       id: 'inna-steinbuka',
       name: 'Inna Šteinbuka',
       title: 'Profesorka, Univerzitet Letonije; predsjednica Savjeta za fiskalnu disciplinu Letonije',
@@ -346,16 +299,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'marko-primorac',
-      name: 'Marko Primorac',
-      title: 'Potpredsjednik Evropske investicione banke; bivši potpredsjednik Vlade i ministar finansija Hrvatske',
-      photo: 'assets/images/speakers/marko-primorac.jpg',
-      bio: [
-        'Marko Primorac je potpredsjednik Evropske investicione banke (EIB), gdje predstavlja Hrvatsku u Upravnom komitetu banke — prvi hrvatski državljanin na toj funkciji.',
-        'Ranije je obavljao funkciju potpredsjednika Vlade i ministra finansija Hrvatske.',
-      ],
-    },
-    {
       id: 'mojmir-mrak',
       name: 'Mojmir Mrak',
       title: 'Profesor i nosilac Žan Mone katedre, Univerzitet u Ljubljani',
@@ -364,16 +307,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
         'Mojmir Mrak je redovni profesor i nosilac Žan Mone katedre pri Akademskoj jedinici za novac i finansije Ekonomskog fakulteta Univerziteta u Ljubljani, kao i stalni gostujući profesor na Bečkom univerzitetu za ekonomiju i poslovanje (Wirtschaftsuniversität Wien) i Burgundy School of Business u Dižonu. Njegovo istraživanje obuhvata međunarodne tokove kapitala, nacionalne javne finansije i javne finansije EU, kao i pristupanje EU.',
         'Ima više od 25 godina iskustva u kreiranju i sprovođenju politike Vlade Slovenije u oblasti međunarodnih finansija i pristupanja EU. Između 1992. i 1996. bio je glavni pregovarač Slovenije za spoljni dug, odgovoran za njene rane kreditne aranžmane sa EBRD-om i Svjetskom bankom, a od 1997. do 2004. bio je glavni savjetnik Vlade Slovenije za finansijske aspekte pristupanja EU.',
         'Od tada je savjetovao slovenačke pregovaračke pozicije u okviru nekoliko višegodišnjih finansijskih okvira EU i realizovao brojne konsultantske angažmane u vezi sa makrofiskalnim pitanjima i pristupanjem EU za vlade širom jugoistočne Evrope. Trenutno je viši programski savjetnik Centra izvrsnosti u finansijama (Centre of Excellence in Finance).',
-      ],
-    },
-    {
-      id: 'rastislav-vrbensky',
-      name: 'Rastislav Vrbensky',
-      title: 'Rukovodilac razvojnih programa i savjetnik, UNDP Evropa',
-      photo: 'assets/images/speakers/rastislav-vrbensky.jpg',
-      bio: [
-        'Rastislav Vrbensky je iskusan rukovodilac u oblasti razvoja, savjetnik i predavač koji je vodio velike timove u vodećim međunarodnim organizacijama, uključujući UN i UNDP.',
-        'Njegova ekspertiza obuhvata održivost, klimu i inovacije, uz istraživačko i predavačko iskustvo na vodećim akademskim institucijama.',
       ],
     },
     {
@@ -399,17 +332,6 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'alexander-plekhanov',
-      name: 'Alexander Plekhanov',
-      title: 'Direktor za tranzicioni uticaj i globalnu ekonomiju, EBRD',
-      photo: 'assets/images/speakers/alexander-plekhanov.jpg',
-      bio: [
-        'Alexander Plekhanov je direktor za tranzicioni uticaj i globalnu ekonomiju u Kabinetu glavnog ekonomiste EBRD-a.',
-        'Uređuje godišnji ekonomski izvještaj EBRD-a, Transition Report, kao i Regional Economic Prospects. Radio je na globalnim makroekonomskim pitanjima, a bio je i ekonomista zadužen za više zemalja, uključujući Bjelorusiju, Kazahstan, Mongoliju i Rusiju.',
-        'Prije nego što se pridružio Banci, Alexander je radio kao ekonomista u Međunarodnom monetarnom fondu.',
-      ],
-    },
-    {
       id: 'zsoka-koczan',
       name: 'Zsoka Koczan',
       title: 'Zamjenica direktora i vodeća ekonomistkinja, EBRD',
@@ -421,15 +343,79 @@ export const SPEAKERS: Record<Language, Speaker[]> = {
       ],
     },
     {
-      id: 'pavle-petrovic',
-      name: 'Pavle Petrović',
-      title: 'Član Srpske akademije nauka i umjetnosti; bivši predsjednik Fiskalnog savjeta Srbije',
-      photo: 'assets/images/speakers/pavle-petrovic.jpg',
-      bio: [
-        'Pavle Petrović je član Srpske akademije nauka i umjetnosti, profesor emeritus Univerziteta u Beogradu i bivši predsjednik Fiskalnog savjeta Republike Srbije (2011–2024).',
-        'Njegovo istraživanje fokusirano je na empirijsku makroekonomiju i makroekonomsku politiku — fiskalnu i monetarnu — objavljivanu u časopisima uključujući Journal of Money, Credit and Banking, Journal of Development Economics i Cambridge Journal of Economics. Bio je gostujući istraživač na Harvardu, Prinstonu i Kornelu, a ekonomiju je predavao na Univerzitetu u Beogradu do 2015. godine.',
-        'Bio je glavni urednik publikacije Quarterly Monitor of Economic Trends and Policies in Serbia (2007–2011), predsjednik Savjeta Narodne banke Srbije (2003–2004) i pomoćnik ministra finansija Srbije (2001–2002). Njegova najnovija knjiga je „Macroeconomic Crisis and Reforms in Serbia 1980–2023: An Econometric Analysis" (SANU, 2024).',
-      ],
+      id: 'ivana-katnic',
+      name: 'Ivana Katnić',
+      bio: [],
+    },
+    {
+      id: 'nina-drakic',
+      name: 'Nina Drakić',
+      bio: [],
+    },
+    {
+      id: 'maida-gorcevic',
+      name: 'Maida Gorčević',
+      bio: [],
+    },
+    {
+      id: 'jakov-milatovic',
+      name: 'Jakov Milatović',
+      bio: [],
+    },
+    {
+      id: 'enrico-letta',
+      name: 'Enrico Letta',
+      bio: [],
+    },
+    {
+      id: 'davor-kunc',
+      name: 'Davor Kunc',
+      bio: [],
+    },
+    {
+      id: 'roko-tolic',
+      name: 'Roko Tolić',
+      bio: [],
+    },
+    {
+      id: 'tamas-kamarasi',
+      name: 'Tamaš Kamaraši',
+      bio: [],
+    },
+    {
+      id: 'laurian-lungu',
+      name: 'Laurian Lungu',
+      bio: [],
+    },
+    {
+      id: 'vasilis-panagopoulos',
+      name: 'Vasilis Panagopoulos',
+      bio: [],
+    },
+    {
+      id: 'branko-mitrovic',
+      name: 'Branko Mitrović',
+      bio: [],
+    },
+    {
+      id: 'aleksa-lukic',
+      name: 'Aleksa Lukić',
+      bio: [],
+    },
+    {
+      id: 'martin-leberle',
+      name: 'Martin Leberle',
+      bio: [],
+    },
+    {
+      id: 'ana-draskovic',
+      name: 'Ana Drašković',
+      bio: [],
+    },
+    {
+      id: 'igor-luksic',
+      name: 'Igor Lukšić',
+      bio: [],
     },
   ],
 };
